@@ -1,0 +1,19 @@
+<section class="tags">
+{% if category %}
+	<img class="category-icon-medium" src="/catalog/base/images/{{ category_id }}.png" />
+{% endif %}
+<div class="category-tags">
+		<ul>
+		{% if category %}
+			<li><span>{{ _('Category') }}</span>: <a href="{% url_for controller='package', action='search', category=category %}">{{ category }}</a></li>
+		{% endif %}
+		{% if tags %}
+			<li><span>{{ _('Tags') }}</span>: 
+			{% for tag in tags %}
+				<a href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a> | 
+			{% endfor %}
+			</li>
+		{% endif %}
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,137 @@
+<header>
+  {% set current_url = request.environ.CKAN_CURRENT_URL %} {% set current_lang =
+  request.environ.CKAN_LANG %}
+  <div id="current-lang" style="display: none;">{{ current_lang }}</div>
+  {% set liferay_lang_prefix = '' %}
+  <div class="container-fluid-custom top-container">
+    {%- block header %} {% include "partials/topline.html" %} {% endblock -%}
+  </div>
+  <div class="container-fluid-custom header-logos">
+		<div class="left-logo">
+			<img src="/catalog/img/header/logo_regione_negativo-01@2x.png" />
+		</div>
+		<div class="center-logo">
+			<img src="/catalog/img/header/open_data.png" />
+		</div>
+		<div class="lines">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="right-logo">
+			<img src="/catalog/img/header/Logo-Unione-Europea-2.png" />
+			<img src="/catalog/img/header/Emblem_of_Italy.png" />
+			<img src="/catalog/img/header/por2.png" />
+		</div>
+	<div>
+    <div>
+      <script type="text/javascript">
+        function searchLiferay() {
+          var q = document.getElementById("search").value;
+          window.location.href = "/c/portal/search?keywords=" + q;
+          //event.preventDefault();
+        }
+      </script>
+      <form
+        id="search-liferay"
+        style="visibility: hidden; display: none;"
+        class="form-allsearch custom-home"
+        data-module="select-switch"
+        onsubmit="searchLiferay();return false;"
+      >
+        <input
+          type="text"
+          id="search"
+          placeholder="{{_('Portal search')}}"
+          class="input-search"
+        />
+        <button id="search-button" value="search" type="">
+          <i class="icon-search"></i><span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container-fluid-custom main-navigation-wrapper">
+    {% set is_geo_data = ('?res_format=wms' in request.environ.CKAN_CURRENT_URL)
+    %} {% set is_map_search = ('/dataset' in request.environ.CKAN_CURRENT_URL
+    and request.params.get('_exp')=='true') %} {% set is_linked_data =
+    ('?res_format=sparql' in request.environ.CKAN_CURRENT_URL) %} {% set
+    is_category = (request.environ.CKAN_CURRENT_URL.endswith('/category')) %} {%
+    set is_organization = ('/organization' in request.environ.CKAN_CURRENT_URL)
+    %} {% set is_app_search =
+    (request.environ.CKAN_CURRENT_URL.endswith('/app')) %}
+    <ul class="main-navigation">
+      <li class="select-dropdown">
+        <a href="/home" class="nav-link">
+          Home
+        </a>
+      </li>
+      <li class="select-dropdown">
+        <a href="/catalog/it/dataset" class="dropbtn nav-link">
+          Dati <span class="caret-custom"></span>
+        </a>
+        <ul class="dropdown-content">
+          <li>
+            <a href="/catalog/it/dataset" class="first-elem"> Dati </a>
+            <a href="/catalog/it/dataset">Dataset</a>
+          </li>
+          <li>
+            <a href="/catalog/it/dataset?res_format=wms">Dati geografici</a>
+          </li>
+          <li><a href="/catalog/it/organization">Cerca su mappa</a></li>
+          <li><a href="/catalog/it/group">Cerca per organizzazione</a></li>
+          <li>
+            <a href="/catalog/category">Cerca per categoria</a>
+          </li>
+          <li><a href="/catalog/it/dataset?res_format=SPARQL">API</a></li>
+          <li>
+            <a href="/catalog/it/dataset?res_format=sparql">Linked data</a>
+          </li>
+          <li>
+            <a href="/invia-il-tuo-dataset1">Invia il tuo Dataset</a>
+          </li>
+        </ul>
+      </li>
+      <li class="select-dropdown">
+        <a href="/applicazioni" class="dropbtn nav-link">
+          Applicazioni <span class="caret-custom"></span>
+        </a>
+        <ul class="dropdown-content">
+          <li>
+            <a href="/applicazioni" class="first-elem">
+              Applicazioni
+            </a>
+            <a href="/segnala-un-applicazione">Segnala la tua applicazione</a>
+          </li>
+          <li><a href="/catalog/it/app">Cerca App</a></li>
+        </ul>
+      </li>
+      <li class="select-dropdown">
+        <a href="/notizie" class="dropbtn nav-link">
+          Notizie <span class="caret-custom"></span>
+        </a>
+        <ul class="dropdown-content">
+          <li>
+            <a href="/notizie" class="first-elem">
+              Notizie
+            </a>
+            <a href="/news">Notizie</a>
+          </li>
+          <li>
+            <a href="/concorsi">Contest</a>
+          </li>
+          <li>
+            <a href="/appuntamenti">Appuntamenti</a>
+          </li>
+          <li>
+            <a href="/newsletter">Newsletter</a>
+          </li>
+          <li><a href="/focus">Focus</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

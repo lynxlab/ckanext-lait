@@ -1,0 +1,245 @@
+{% extends "package/base.html" %}
+
+{% set res = c.resource %}
+
+{% block head_extras -%}
+  {{ super() }}
+  {% set description = h.markdown_extract(res.description, extract_length=200) if res.description else h.markdown_extract(c.package.notes, extract_length=200) %}
+  <meta property="og:title" content="{{ h.dataset_display_name(c.package) }} - {{ h.resource_display_name(res) }} - {{ g.site_title }}">
+  <meta property="og:description" content="{{ description|forceescape }}">
+{% endblock -%}
+
+{% block subtitle %}{{ h.dataset_display_name(c.package) }} - {{ h.resource_display_name(res) }}{% endblock %}
+
+{% block breadcrumb_content_selected %}{% endblock %}
+
+{% block breadcrumb_content %}
+  {{ super() }}
+  <li class="active"><a href="">{{ h.resource_display_name(res)|truncate(30) }}</a></li>
+{% endblock %}
+
+{% block pre_primary %}
+  {% block license %}
+    <!-- Modal added for license confirmation-->
+    <div id="licenseModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="licenseModalLabel" aria-hidden="true" style="display:none">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="licenseModalLabel">{{ _('License confirmation') }}</h3>
+      </div>
+
+      <div class="modal-body">
+        <h2>{{ _('Before proceed with the download you must read and accept the license.') }}</h2>
+        <hr>
+        <h2 id="resource-license-name"></h2>
+        <span id="resource-license-url"></span>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">{{ _('I do not agree, bring me back!') }}</button>
+        <button id="license-confirmation" class="btn btn-primary">{{ _('OK, please proceed') }}</button>
+      </div>
+    </div>
+  {% endblock %}
+  {% block resource %}
+    <section class="module module-resource">
+      <div class="module-content">
+        <div class="actions">
+          {% block resource_actions %}
+          <ul>
+            {% block resource_actions_inner %}
+            {% if c.userobj!=None and (res.format|lower=='wms' or res.format|lower=='geojson' or res.format|lower=='csv') %}
+              <li>
+                <script type="text/javascript">
+                  function improve(){
+              			var btn = document.getElementById("improve");
+              			if (btn.className == "btn btn-improve") {
+              				btn.className = "btn btn-default active";
+              			} else {
+              				btn.className = "btn btn-improve";
+              			}
+                  }
+                </script>
+                <button id="improve" type="button" class="btn btn-improve" onclick="improve();">
+                  {{ _('Improve the data') }}
+                </button>
+            {% endif %}
+            {% if h.check_access('package_update', {'id':pkg.id }) %}
+              <li>{% link_for _('Manage'), controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn', icon='wrench' %}</li>
+            {% endif %}
+            {% if res.url %}
+              <li>
+                <script type="text/javascript">
+                  //document.getElementById("licenseModal").style = '';
+                  document.getElementById("resource-license-name").innerHTML = '<b>{{pkg.license_title}}</b>';
+                  document.getElementById("resource-license-url").innerHTML = '<a target="_blank" href="{{pkg.license_url}}">{{pkg.license_url}}</a>';
+                  document.getElementById("license-confirmation").onclick = function(){
+                    $('#licenseModal').modal('hide');
+                    window.location.href = '{{res.url}}'.replace(/&amp;/g,'&');
+                  };
+                </script>
+                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="#licenseModal" data-toggle="modal">
+                  {% if res.resource_type in ('listing', 'service') %}
+                    <i class="icon-eye-open"></i> {{ _('View') }}
+                  {% elif  res.resource_type == 'api' %}
+                    <i class="icon-key"></i> {{ _('API Endpoint') }}
+                  {% else %}
+                    <i class="icon-download"></i> {{ _('Download') }}
+                  {% endif %}
+                </a>
+              </li>
+            {% endif %}
+            {% if 'datastore' in g.plugins %}
+              <li>{% snippet 'package/snippets/data_api_button.html', resource=res, datastore_root_url=c.datastore_api %}</li>
+            {% endif %}
+            {% endblock %}
+          </ul>
+          {% endblock %}
+        </div>
+        {% block resource_content %}
+          {% block resource_read_title %}<h1 class="page-heading">{{ h.resource_display_name(res) | truncate(50) }}</h1>{% endblock %}
+          {% block resource_read_url %}
+            {% if res.url %}
+              <p class="muted ellipsis">{{ _('URL:') }} <a href="{{ res.url }}" title="{{ res.url }}">{{ res.url }}</a></p>
+            {% endif %}
+          {% endblock %}
+          <div class="prose notes" property="rdfs:label">
+            {% if res.description %}
+              {{ h.render_markdown(res.description) }}
+            {% endif %}
+          {% endblock %}
+        </div>
+      </div>
+
+{% block data_preview %}
+      {% block resource_view %}
+        {% block resource_view_nav %}
+          {% set resource_preview = h.resource_preview(c.resource, c.package) %}
+          {% snippet "package/snippets/resource_views_list.html",
+             views=resource_views,
+             pkg=pkg,
+             is_edit=false,
+             view_id=current_resource_view['id'],
+             resource_preview=resource_preview,
+             resource=c.resource,
+             extra_class="nav-tabs nav-tabs-plain"
+           %}
+        {% endblock %}
+          {% block resource_view_content %}
+            <div class="resource-view">
+              {% set resource_preview = h.resource_preview(c.resource, c.package) %}
+              {% set views_created = res.has_views or resource_preview %}
+              {% if views_created %}
+                {% if resource_preview and not current_resource_view %}
+                  {{ h.resource_preview(c.resource, c.package) }}
+                {% else %}
+                  {% for resource_view in resource_views %}
+                    {% if resource_view == current_resource_view %}
+                      {% snippet 'package/snippets/resource_view.html',
+                         resource_view=resource_view,
+                         resource=c.resource,
+                         package=c.package
+                       %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% else %}
+                {# Views not created #}
+                <div class="data-viewer-info">
+                  <p>{{ _("There are no views created for this resource yet.") }}</p>
+                  {% if h.check_access('resource_view_create', {'resource_id': c.resource.id}) %}
+                    <p class="text-muted">
+                      <i class="fa fa-info-circle"></i>
+                      {{ _("Not seeing the views you were expecting?")}}
+                      <a href="javascript:void(0);" data-toggle="collapse" data-target="#data-view-info">
+                        {{ _('Click here for more information.') }}</a>
+                    </p>
+                    <div id="data-view-info" class="collapse">
+                      <p>{{ _('Here are some reasons you may not be seeing expected views:') }}</p>
+                      <ul>
+                        <li>{{ _("No view has been created that is suitable for this resource")}}</li>
+                        <li>{{ _("The site administrators may not have enabled the relevant view plugins")}}</li>
+                        <li>{{ _("If a view requires the DataStore, the DataStore plugin may not be enabled, or the data may not have been pushed to the DataStore, or the DataStore hasn't finished processing the data yet")}}</li>
+                      </ul>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endblock %}
+      {% endblock %}
+      {% endblock %}
+
+    </section>
+  {% endblock %}
+
+{% endblock %}
+
+{% block primary_content %}
+  {% block resource_additional_information %}
+    {% if res %}
+      <section class="module">
+        <div class="module-content">
+          <h2>{{ _('Additional Information') }}</h2>
+          <table class="table table-striped table-bordered table-condensed" data-module="table-toggle-more">
+            <thead>
+              <tr>
+                <th scope="col">{{ _('Field') }}</th>
+                <th scope="col">{{ _('Value') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ _('Last updated') }}</th>
+                <td>{{ h.render_datetime(res.last_modified) or h.render_datetime(res.revision_timestamp) or h.render_datetime(res.created) or _('unknown') }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ _('Created') }}</th>
+                <td>{{ h.render_datetime(res.created) or _('unknown') }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ _('Format') }}</th>
+                <td>{{ res.mimetype_inner or res.mimetype or res.format or _('unknown') }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ _('License') }}</th>
+                <td>{% snippet "snippets/license.html", pkg_dict=pkg, text_only=True %}</td>
+              </tr>
+              {% for key, value in h.format_resource_items(res.items()) %}
+                <tr class="toggle-more"><th scope="row">{{ key }}</th><td>{{ value }}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {% endif %}
+  {% endblock %}
+
+  <!-- START commentato per RILASCIO -->
+  {% block disqus %}
+    {% snippet "snippets/disqus.html", user=c.userobj, id=res.id, title=res.name %}
+    <div style="margin-top: 10px;">
+      <script type="text/javascript">
+      var win_detached;
+      function detach(){
+        if(win_detached)
+          win_detached.close();
+        win_detached = window.open('/catalog/disqus?id={{res.id}}&title={{res.name}}','{{res.name}}','width=667,height=500,top=100,left=100');
+      }
+      </script>
+      <button id="detach" type="button" class="btn btn-default" onclick="detach();">
+        {{ _('Popup comments') }}
+      </button>
+    </div>
+  {% endblock %}
+  <!-- END commentato per RILASCIO -->
+{% endblock %}
+
+{% block secondary_content %}
+
+  {% block resources_list %}
+    {#% snippet "package/snippets/resources.html", pkg=pkg, active=res.id %#}
+  {% endblock %}
+
+  {% block resource_license %}
+    {% snippet "snippets/social.html" %}
+  {% endblock %}
+{% endblock %}

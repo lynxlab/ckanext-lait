@@ -1,0 +1,92 @@
+{% set current_url = request.environ.CKAN_CURRENT_URL %}
+{% set current_lang = request.environ.CKAN_LANG %}
+{#<div class="container">
+		<div class="row">
+			<div class="span12">
+				<ul class="tabs">
+					{% if c.userobj==None %}
+						<li class="logo-login"><a href="/login" class="logo-login">{{_('login')}}/{{_('sign up')}}</a></li>
+						<!-- li><a href="/login">{{_('entra con un social')}}</a></li -->
+					{% else %}
+						<li class="logo-login">{{c.userobj.fullname}} / <a href="/c/portal/logout">{{_('logout')}}</a></li>
+					{% endif %}
+					{% if current_lang == 'it' %}
+						{% set liferay_lang_prefix = '/it' %}
+						<li class="en"><a href="{% url_for current_url, locale='en' %}">english</a></li>
+					{% elif current_lang == 'en' %}
+						{% set liferay_lang_prefix = '/en' %}
+						<li class="en"><a href="{% url_for current_url, locale='it' %}">italian</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+#}
+
+<div class="top-bar">
+	<div class="left-block">
+		<ul class="top-nav">
+			<li>
+				<a href="/web/open-lavoro">OpenLavoro</a>
+			</li>
+			<li>
+				<a href="#">OpenFarmaceutica</a>
+			</li>
+			<li>
+				<a href="/web/open-ambiente">OpenAmbiente</a>
+			</li>
+			<li>
+				<a href="#">OpenSanità</a>
+			</li>
+			<li>
+				<a href="#">OpenSpesa</a>
+			</li>
+			<li>
+				<a href="#">OpenProgetti</a>
+			</li>
+		</ul>
+	</div>
+	<div class="right-block">
+		<div class="select-dropdown">
+			<div class="dropbtn">
+				{% if current_lang == 'it' %}
+				Italiano
+				{% else %}
+				English
+				{% endif%}
+				<span class="caret-custom"></span>
+			</div>
+			<div id="languageDropdown" class="dropdown-content">
+				{% if current_lang == 'it' %}
+					{% set liferay_lang_prefix = '/it' %}
+					<a href="/en">
+						English
+					</a>
+				{% else %}
+					{% set liferay_lang_prefix = '/en' %}
+					<a href="/it">
+						Italiano
+					</a>
+				{% endif%}
+			</div>
+		</div>
+		<div class="user-icon">
+			<div class="head"></div>
+			<div class="body"></div>
+		</div>
+		<div class="login-link">
+		{% if c.userobj==None %}
+			<a href="/login" class="logo-login">Accedi all'area personale</a>
+		{% else %}
+			<a href="/c/portal/logout" class="logo-login" >Esci</a></li>
+		{% endif %}
+		{#{c.userobj.fullname}#}
+		<!--
+		<a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span class="text">{{ _('Log out') }}</span>
+          </a> -->
+		</div>
+	</div>
+</div>
+

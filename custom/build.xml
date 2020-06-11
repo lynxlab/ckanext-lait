@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="CKAN LAit customization">
+  	<target name="ckan" description="Copy the CKAN customized controllers into the src directory">
+
+        <copy todir="../../ckan/ckan">
+            <fileset dir="ckan/ckan">
+              <include name="**/*.rdf"/>
+              <include name="**/*.py"/>
+              <include name="**/*.po"/>
+            </fileset>
+        </copy>
+
+        <copy todir="../../ckanext-spatial/ckanext/spatial">
+            <fileset dir="ckanext-spatial/ckanext/spatial">
+              <include name="**/*.js"/>
+              <include name="**/*.html"/>
+              <include name="**/*.py"/>
+            </fileset>
+        </copy>
+
+        <copy file="ckan/ckanext/reclinepreview/plugin.py" todir="../../ckan/ckanext/reclinepreview"/>
+        <copy file="ckan/ckanext/reclinepreview/theme/templates/recline_lait.html" todir="../../ckan/ckanext/reclinepreview/theme/templates"/>
+
+  	</target>              	
+</project>

@@ -1,0 +1,227 @@
+{% set liferay_lang_prefix = '/it' %}
+{% if request.environ.CKAN_LANG == 'en' %}
+	{% set liferay_lang_prefix = '/en' %}
+{% endif %}
+</div>
+			<!--END CONTAINER-OUT-->
+		</div>
+		<!--END WRAPPER-IN-->
+	</div>
+	<!--END WRAPPER-OUT-->
+
+<footer> 
+	<div class="footer-top">
+		<div class="loghi footer-loghi"> 
+			<ul> 
+				<li>
+					<a target="_blank" href="http://creativecommons.org/licenses/by/4.0/">
+						<img srcset=" /LaitNew-theme/img/custom/cc.png 1x, 
+							/LaitNew-theme/img/custom/cc@2x.png 2x" 
+							alt="logo creativecommons">
+					</a>
+				</li> 
+				<li>
+					<a target="_blank" href="http://www.w3.org/2001/sw/wiki/RDF">
+						<img srcset=" /LaitNew-theme/img/custom/rdf.png 1x, 
+							/LaitNew-theme/img/custom/rdf@2x.png 2x" 
+							alt="logo w3c rdf">
+					</a>
+				</li> 
+				<li>
+					<img srcset=" /LaitNew-theme/img/custom/opendata1_5.png 1x,
+						 /LaitNew-theme/img/custom/opendata1_5@2x.png 2x" 
+						 alt="logo opendata">
+				</li> 
+			</ul> 
+		</div> 
+	</div> 
+	<div> 
+		<div class="container-fluid-custom footer-bottom-wrapper"> 
+			<div class="logos"> 
+				<img src="/LaitNew-theme/img/custom/logo_outline_classico.png" class=""> 
+				<img src="/LaitNew-theme/img/custom/open_data_w.png" class=""> 
+				<img src="/LaitNew-theme/img/custom/Logo-Grande.png" class=""> 
+			</div> 
+			<div class=""> 
+				<div> 
+					<div class="col-wrapper">
+						<div> 
+							<h4 class="center-title">OPEN DATA LAZIO</h4> 
+							<ul class="footer-navigate"> 
+								<li> 
+									<a href="/it/chi-siamo">Chi siamo</a> 
+								</li> 
+								<li> 
+									<a href="/it/linee-guida">Linee guida</a> 
+								</li> 
+								<li> 
+									<a href="/it/contatti">Contatti</a>
+								</li> 
+								<li> 
+									<a href="/it/statistiche">Statistiche</a> 
+								</li> 
+								<li> 
+									<a href="/it/informativa-dati-personali">Informativa dati personali</a> 
+								</li> 
+								<li> 
+									<a href="/it/condizione-d-uso">Condizioni d'uso</a> 
+								</li> 
+								<li> 
+									<a href="/it/link">Link</a> 
+								</li> 
+							</ul> 
+						</div> 
+						<div> 
+							<h4 class="center-title">ONTOLOGIE</h4> 
+							<ul class="footer-navigate"> 
+								<li> <a href="/it/application-programming-interface">Api</a> </li> 
+								<li> <a href="/it/servizi-geografici">Servizi geografici</a> </li>
+								<li> <a href="/it/endpoint-sparql">Sparql endpoint</a> </li> 
+								<li> <a href="/it/ontologie">Ontologie</a> </li> 
+								<li> <a href="/it/feed-xml-rss">XML/RSS feed</a> </li> 
+							</ul> 
+						</div> 
+						<div> 
+							<h4 class="center-title">AIUTO</h4> 
+							<ul class="footer-navigate"> 
+								<li> <a href="/it/faq">FAQ</a> </li> 
+								<li> <a href="/it/materiali-utili">Materiali utili</a> </li>
+								<li> <a href="/it/licenze-di-utilizzo">Licenze</a> </li> 
+								<li> <a href="/it/leggi-e-direttive">Leggi e direttive</a> </li> 
+							</ul> 
+						</div> 
+						<div class="footer-social"> 
+							<h4 class="center-title">SEGUICI SU</h4> 
+							<ul class="footer-navigate"> 
+								<li><a href="facebook.com"><i class="icon-facebook"></i></a></li>
+								<li><a href="twitter.com"><i class="icon-twitter"></i></a></li> 
+								<li><a href="mail"><i class="icon-envelope"></i></a></li> 
+							</ul> 
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="footer-notes"> 
+				<a href="#">Note Legali</a> 
+				<a href="#">Privacy</a> 
+				<a href="#">Mappa del sito</a> 
+				<a href="#">Credit</a> 
+				<a href="#"> © 2020 Open Data Lazio</a> 
+			</div> 
+		</div> 
+	</div>
+	<!-- GOOGLE ANALYTICS -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-57956658-2']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script');
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			ga.type = 'text/javascript';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</footer>
+{#
+<footer>
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="span6 loghi">
+					<ul>
+						<li><a href="http://creativecommons.org/licenses/by/3.0/"><img src="/catalog/img/logoCC.png" alt="logo creativecommons"></a></li>
+						<li><img src="/catalog/img/logoOpenData.png" alt="logo opendata"></li>
+						<li><a href="http://www.w3.org/2001/sw/wiki/RDF"><img src="/catalog/img/logow3c-rdf.png" alt="logo w3c rdf"></a></li>
+					</ul>
+				</div>
+				<div class="span6">
+					<ul class="socials unstyled">
+						<li><a class="facebook" href="https://www.facebook.com/reglazio"></a><br></li>
+						<li><a class="twitter" href="https://twitter.com/RegioneLazio"></a><br></li>
+						<!--li><a class="gplus" href=""></a><br></li-->
+						<li><a class="mail" href="http://dati.sviluppo.laitspa.it/contatti"></a><br></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-wrapper">
+		<div class="container">
+			<div class="row show-grid">
+				<div class="span12">
+					<div class="row show-grid">
+						<!-- START commentato per RILASCIO -->
+						<!-- FOOTER: OPEN DATA LAZIO-->
+						<div class="span2 space" style="margin-left: 0px">
+							<h4 class="center-title">{{_('OPEN DATA LAZIO')}}</h4>
+							<ul class="footer-navigate">
+								<li><a href="{{liferay_lang_prefix}}/chi-siamo">{{_('About')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/linee-guida">{{_('Guidelines')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/contatti">{{_('Contacts')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/statistiche">{{_('Statistics')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/informativa-dati-personali">{{_('Personal data disclaimer')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/condizione-d-uso">{{_('Terms of use')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/link">{{_('Links')}}</a></li>
+							</ul>
+						</div>
+						<!-- FOOTER: DATI E ONTOLOGIE -->
+						<div class="span2 footer-center space">
+							<h4 class="center-title">{{_('ONTOLOGIES')}}</h4>
+							<ul class="footer-navigate">
+								<li><a href="{{liferay_lang_prefix}}/application-programming-interface">{{_('Api')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/servizi-geografici">{{_('Geo services')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/endpoint-sparql/">{{_('Sparql endpoint')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/ontologie">{{_('Ontologies')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/feed-xml-rss">{{_('XML/RSS feed')}}</a></li>
+							</ul>
+						</div>
+						<!-- FOOTER: AIUTO -->
+						<div class="span2 fotter-center space">
+							<h4 class="center-title">{{_('HELP')}}</h4>
+							<ul class="footer-navigate">
+								<li><a href="{{liferay_lang_prefix}}/faq">{{_('FAQ')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/materiali-utili">{{_('Useful docs')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/licenze-di-utilizzo">{{_('Licenses')}}</a></li>
+								<li><a href="{{liferay_lang_prefix}}/leggi-e-direttive">{{_('Regulations and directives')}}</a></li>
+							</ul>
+						</div>
+						<!-- END commentato per RILASCIO -->
+						
+						<!-- FOOTER: LOGO -->
+						<div class="span2 offset3" style="width: 200px;">
+							<a href="http://www.laitspa.it"><img src="/catalog/img/lait_footer.png" alt="Logo Lait spa" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row show-grid">
+				<!-- FOOTER: COPYRIGHT TEXT -->
+				<div class="span12">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- GOOGLE ANALYTICS -->
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-57956658-2']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		ga.type = 'text/javascript';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+</footer>
+#}

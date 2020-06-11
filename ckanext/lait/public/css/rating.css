@@ -1,0 +1,88 @@
+.starRate5 {
+    background: url("../img/star_rate_5.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    margin-bottom: -2px;
+    min-width: 80px;
+}
+.starRate4 {
+    background: url("../img/star_rate_4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    margin-bottom: -2px;
+    min-width: 64px;
+}
+.starRate3 {
+    background: url("../img/star_rate_3.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    margin-bottom: -2px;
+    min-width: 48px;
+}
+.starRate2 {
+    background: url("../img/star_rate_2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    margin-bottom: -2px;
+    min-width: 32px;
+}
+.starRate1 {
+    background: url("../img/star_rate_1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    margin-bottom: -2px;
+    min-width: 16px;
+}
+
+
+.rating-new, .rating-new-disabled {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  font-size: 32px;
+}
+.rating-new > span, .rating-new-disabled > span {
+  display: inline-block;
+  position: relative;
+  width: 0.6em;
+}
+
+.rating-new  > span{
+    cursor: pointer;
+}
+
+.rating-new > span:hover:before, .rating-new > span:hover ~ span:before{
+   content: "\2605";
+   color: #ffcc33;
+   position: absolute;
+}
+
+.rating-new-selected, .rating-new-selected > :before, .rating-new-selected ~ :before {
+   content: "\2605";
+   color: #ff3300;
+   position: absolute;
+}
+
+.rating-title{
+    float: left;
+    margin-right: 15px;
+    padding-top: 2px;
+}
+
+.modal {
+    display:    none;
+    height:     100%;
+    width:      100%;
+    position:   fixed;
+    z-index:    2000;
+    top:        0;
+    left:       0;
+    margin: 0 !important;
+    background: url('../img/loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+.modal-backdrop {
+    background: white;
+}
