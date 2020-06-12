@@ -1,3 +1,4 @@
+{% ckan_extends %}
 {# Allows the DOCTYPE to be set on a page by page basis #}
 {%- block doctype %}<!DOCTYPE html>{% endblock -%}
 
@@ -24,11 +25,9 @@
     {% endblock %}
 
     #}
-    {%- block meta -%}
-      <meta charset="utf-8" />
-      {% block meta_generator %}<meta name="generator" content="ckan {{ c.__version__ }}" />{% endblock %}
-    {%- endblock -%}
-
+    {% block meta %}
+      {{ super() }}
+    {% endblock %}
     {#
     Add a custom title to the page by extending the title block. Call super()
     to get the default page title.
@@ -82,7 +81,7 @@
       </style>
       {%- endif %}
     {% endblock %}
-   
+
   </head>
 
   {# Allows custom attributes to be added to the <body> tag #}
@@ -114,6 +113,6 @@
       {# defined in the config.ini under "ckan.template_footer_end" #}
       {{ g.template_footer_end | safe }}
     {%- endblock %}
-    
+
   </body>
 </html>
