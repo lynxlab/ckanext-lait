@@ -38,22 +38,20 @@ Example:
       <li class="ris icon">
         <!--<img src="/catalog/img/ic-dataset.png" alt='' />-->
         <!--a href="{% url_for controller='package', action='search', category=package.category %}" class="category-icon"-->
-          {% if package.get('category_id', '') != '' %}
-            <!-- <img class="category-icon-small" src="/catalog/img/cat_{{ package.category_id }}.png" /> -->
-            <img class="category-icon-small" src="/catalog/base/images/{{ package.category_id }}.png" />
-
+          {% if package.groups[0] and package.groups[0].get("name") is defined and package.groups[0].get("name")|length %}
+            <img class="category-icon-small" src="/catalog/img/groups/{{ package.groups[0].get("name") }}.png" />
           {% endif %}
         <!--/a-->
       </li>
       <li class="ris">
         <!--{% if package.category %}
           <p>{{ package.category }}</p>
-          
+
         {% endif %}-->
         {% if package.groups[0] %}
           <p class="groups">{{ package.groups[0].get("display_name") }}</p>
         {% endif %}
-        
+
       </li>
     </ul>
     <div class="dataset-content">
@@ -80,13 +78,13 @@ Example:
       <div>{{ notes|urlize }}</div>
       <ul class='info-dataset'>
         {% if package.organization %}
-          <li>{{ _('Published by') }}: 
+          <li>{{ _('Published by') }}:
             <span>
             <a href="{{ h.url_for(controller='organization', action='read', id=package.organization.id) }}">{{ package.organization.title }}</a>
             </span>
           </li>
         {% endif %}
-        <li>{{ _('Tags') }}: 
+        <li>{{ _('Tags') }}:
           {% for tag in package.tags %}
             <span>
               <a href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
@@ -104,7 +102,7 @@ Example:
           {% endfor %}
         </li>
         {% endif %}
-        <!-- <li>{{ _('Community Rating')}}: 
+        <!-- <li>{{ _('Community Rating')}}:
           <span>
           {% if package.rating_average_int and package.rating_average_int!='None' %}
             <a href="{% url_for controller='package', action='search', rating_average_int=package.rating_average_int %}">{{ rating_stars }}</a> ({{ _('Total voters') }}: {{package.rating_count}})
