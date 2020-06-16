@@ -254,6 +254,14 @@ class LaitPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
     p.implements(p.IRoutes)
     p.implements(p.ITemplateHelpers)
     p.implements(p.IResourceController, inherit=True)
+    p.implements(p.IFacets)
+
+    def dataset_facets(self, facets_dict, package_type):
+        print 'facets dict: {}'.format(facets_dict)
+        del facets_dict['source_catalog_title']
+        del facets_dict['organization_region_it']
+        print 'facets dict: {}'.format(facets_dict)
+        return facets_dict
 
     def before_show(self, data_dict):
         translated_data_dict = translate_resource_data_dict(data_dict)
