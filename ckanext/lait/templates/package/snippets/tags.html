@@ -1,16 +1,17 @@
 <section class="tags">
-{% if category %}
-	<img class="category-icon-medium" src="/catalog/base/images/{{ category_id }}.png" />
+{% if groups[0] and groups[0].get("name") is defined and groups[0].get("name")|length %}
+    <img class="category-icon-medium" src="/catalog/img/groups/{{ groups[0].get("name") }}.png" />
 {% endif %}
+
 <div class="category-tags">
 		<ul>
-		{% if category %}
-			<li><span>{{ _('Category') }}</span>: <a href="{% url_for controller='package', action='search', category=category %}">{{ category }}</a></li>
+		{% if groups[0] and groups[0].get("name") is defined and groups[0].get("name")|length %}
+			<li><span>{{ _('Gruppo') }}</span>: <a href="{% url_for controller='package', action='search', category=groups[0].get("name") %}">{{ groups[0].get("name") }}</a></li>
 		{% endif %}
 		{% if tags %}
-			<li><span>{{ _('Tags') }}</span>: 
+			<li><span>{{ _('Tags') }}</span>:
 			{% for tag in tags %}
-				<a href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a> | 
+				<a href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a> |
 			{% endfor %}
 			</li>
 		{% endif %}

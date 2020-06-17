@@ -26,7 +26,7 @@
         </div>
       {% endif %}
       <ul class="module-dati">
-        <li>{{ _('License') }}: 
+        <li>{{ _('License') }}:
         {% if pkg.license_title %}
             {% if pkg.license_url %}
               <span><a href="{{ pkg.license_url }}">{{ pkg.license_title }}</a></span>
@@ -50,7 +50,7 @@
   {% endblock %}
 
   {% block package_tags %}
-    {% snippet "package/snippets/tags.html", tags=pkg.tags, category=pkg.category, category_id=pkg.category_id %}
+    {% snippet "package/snippets/tags.html", tags=pkg.tags, category=pkg.category, category_id=pkg.category_id, groups=pkg.groups %}
   {% endblock %}
 
 <!-- START commentato per RILASCIO -->
@@ -81,5 +81,5 @@
     </div>
   {% endblock %}
   <!-- END commentato per RILASCIO -->
-              
+
 {% endblock %}
