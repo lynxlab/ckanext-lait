@@ -264,10 +264,10 @@ class LaitPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
             del facets_dict['source_catalog_title']
 	return facets_dict
 	
-    def group_facets(facets_dict, group_type, package_type):
+    def group_facets(self, facets_dict, group_type, package_type):
         return facets_dict
 		
-    def organization_facets(facets_dict, organization_type, package_type):
+    def organization_facets(self, facets_dict, organization_type, package_type):
         return facets_dict
 
     def before_show(self, data_dict):
