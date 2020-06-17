@@ -257,17 +257,17 @@ class LaitPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
     p.implements(p.IFacets)
 
     def dataset_facets(self, facets_dict, package_type):
-	    for facet_key in facets_dict.keys():
-			if 'organization_region_' in facet_key:
+	for facet_key in facets_dict.keys():
+	    if 'organization_region_' in facet_key:
                 del facets_dict[facet_key]
         if 'source_catalog_title' in facets_dict.keys():
             del facets_dict['source_catalog_title']
-		return facets_dict
+	return facets_dict
 	
-	def group_facets(facets_dict, group_type, package_type):
-	    return facets_dict
+    def group_facets(facets_dict, group_type, package_type):
+        return facets_dict
 		
-	def organization_facets(facets_dict, organization_type, package_type):
+    def organization_facets(facets_dict, organization_type, package_type):
         return facets_dict
 
     def before_show(self, data_dict):
