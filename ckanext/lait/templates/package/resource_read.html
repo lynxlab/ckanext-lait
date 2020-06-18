@@ -79,7 +79,7 @@
                     window.location.href = '{{res.url}}'.replace(/&amp;/g,'&');
                   };
                 </script>
-                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" data-target="#licenseModal" data-toggle="modal">
+                <button type="button" class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" data-target="#licenseModal" data-toggle="modal">
                   {% if res.resource_type in ('listing', 'service') %}
                     <i class="icon-eye-open"></i> {{ _('View') }}
                   {% elif  res.resource_type == 'api' %}
@@ -87,7 +87,7 @@
                   {% else %}
                     <i class="icon-download"></i> {{ _('Download') }}
                   {% endif %}
-                </a>
+                </button>
               </li>
             {% endif %}
             {% if 'datastore' in g.plugins %}
