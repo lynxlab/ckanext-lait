@@ -27,5 +27,15 @@ setup(
         # Add plugins here, e.g.
         # myplugin=ckanext.lait.plugin:PluginClass
         lait = ckanext.lait.plugin:LaitPlugin
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
     ''',
+# TODO: AGGIUNTO
+    message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
+    }
 )

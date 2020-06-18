@@ -4,6 +4,7 @@ import routes.mapper
 import ckan.lib.base as base
 import ckan.lib.helpers as h
 import ckan.plugins as p
+from ckan.lib.plugins import DefaultTranslation
 import ckan.plugins.toolkit as tk
 import urllib2
 import urllib
@@ -104,7 +105,6 @@ def apps(params):
     url = config.get('ckan.base_url', '')+'/CKANAPIExtension/apps?'+params
     #url = 'dati.lazio.it/CKANAPIExtension/apps?'+params
     try:
-        print(url)
         response = urllib2.urlopen(url)
         response_body = response.read()
     except Exception, inst:
@@ -140,7 +140,6 @@ def facets():
     d['tags'] = _('Tags')
     d['res_format'] = _('Formats')
     d['license_id'] = _('Licenses')
-    print 'd: {}'.format(d)
     return d
 
 def translate_resource_data_dict(data_dict):
@@ -249,12 +248,13 @@ def translate_related_list(related_list):
         translated.append(dict_trans)
     return translated
 
-class LaitPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
+class LaitPlugin(p.SingletonPlugin, DefaultTranslation):
     p.implements(p.IConfigurer)
     p.implements(p.IRoutes)
     p.implements(p.ITemplateHelpers)
     p.implements(p.IResourceController, inherit=True)
     p.implements(p.IFacets)
+    p.implements(p.ITranslation)
 
     def dataset_facets(self, facets_dict, package_type):
 	for facet_key in facets_dict.keys():
