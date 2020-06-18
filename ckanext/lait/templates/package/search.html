@@ -76,6 +76,7 @@
   <!-- END commentato per RILASCIO -->
 
   {% block header_site_search %}
+  <!--
     <form id="dataset-search" class="form-search" action="{% url_for controller='package', action='search' %}" method="get">
       <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search datasets...') }}" class="input-search"/>
       <button value="search" type="">
@@ -83,6 +84,7 @@
       </button>
 
     </form>
+  -->
   {% endblock %}
   {% for facet in c.facet_titles %}
     {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}

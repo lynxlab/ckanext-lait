@@ -98,3 +98,12 @@
     padding: 10px;
 }
 
+/*
+ * dataset page search button 
+ */
+form.search-form .search-input-group .input-group-btn button {
+    padding: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+

@@ -21,21 +21,24 @@
 {% block pre_primary %}
   {% block license %}
     <!-- Modal added for license confirmation-->
-    <div id="licenseModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="licenseModalLabel" aria-hidden="true" style="display:none">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="licenseModalLabel">{{ _('License confirmation') }}</h3>
-      </div>
-
-      <div class="modal-body">
-        <h2>{{ _('Before proceed with the download you must read and accept the license.') }}</h2>
-        <hr>
-        <h2 id="resource-license-name"></h2>
-        <span id="resource-license-url"></span>
-      </div>
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">{{ _('I do not agree, bring me back!') }}</button>
-        <button id="license-confirmation" class="btn btn-primary">{{ _('OK, please proceed') }}</button>
+    <div id="licenseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="licenseModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="licenseModalLabel">{{ _('License confirmation') }}</h3>
+          </div>
+          <div class="modal-body">
+            <h2>{{ _('Before proceed with the download you must read and accept the license.') }}</h2>
+            <hr>
+            <h2 id="resource-license-name"></h2>
+            <span id="resource-license-url"></span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('I do not agree, bring me back!') }}</button>
+            <button type="button" id="license-confirmation" class="btn btn-primary">{{ _('OK, please proceed') }}</button>
+          </div>
+        </div>
       </div>
     </div>
   {% endblock %}
@@ -76,7 +79,7 @@
                     window.location.href = '{{res.url}}'.replace(/&amp;/g,'&');
                   };
                 </script>
-                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="#licenseModal" data-toggle="modal">
+                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" data-target="#licenseModal" data-toggle="modal">
                   {% if res.resource_type in ('listing', 'service') %}
                     <i class="icon-eye-open"></i> {{ _('View') }}
                   {% elif  res.resource_type == 'api' %}
