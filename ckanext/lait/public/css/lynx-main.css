@@ -107,3 +107,6 @@ form.search-form .search-input-group .input-group-btn button {
     border-bottom-left-radius: 0;
 }
 
+ul.resource-list.ui-sortable.reordering {
+    margin-top: 15px;
+}
