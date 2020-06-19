@@ -65,25 +65,9 @@ def infograph_data(res,infograph_config):
 		data.append({'axis1':r[axis1],'axis2':float(r[axis2])})
 	return data
 
-def categories_OLD():
-    url = config.get('ckan.base_url')+'/CKANAPIExtension/categories?count=true'
-    try:
-        response = urllib2.urlopen(url)
-        response_body = response.read()
-    except Exception, inst:
-        msg = "Couldn't connect to categories service %r: %s" % (url, inst)
-        raise Exception, msg
-    try:
-        categories = json.loads(response_body)
-    except Exception, inst:
-        msg = "Couldn't read response from categories service %r: %s" % (response_body, inst)
-        raise Exception, inst
-    return categories
-
-
 
 def categories():
-    url = config.get('ckan.site_url')+'/CKANAPIExtension/categories?count=true'
+    url = config.get('ckan.site_url').replace('catalog/', '')+'/CKANAPIExtension/categories?count=true'
     #url = 'dati.lazio.it/CKANAPIExtension/categories?count=true'
     try:
         response = urllib2.urlopen(url)
@@ -102,7 +86,7 @@ def categories():
 def apps(params):
     params = params.replace("&amp;", "&")
     params = params.replace(" ", "%20")
-    url = config.get('ckan.base_url', '')+'/CKANAPIExtension/apps?'+params
+    url = config.get('ckan.base_url', '').replace('catalog/', '')+'/CKANAPIExtension/apps?'+params
     #url = 'dati.lazio.it/CKANAPIExtension/apps?'+params
     try:
         response = urllib2.urlopen(url)
