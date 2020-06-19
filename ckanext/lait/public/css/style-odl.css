@@ -478,7 +478,7 @@ li.ris p {
   line-height: 22px;
 }
 
-.label,
+.label:not(.dataset-private),
 .badge {
   background-color: #ffffff;
   display: inline-block;
