@@ -219,7 +219,7 @@ class LaitPlugin(p.SingletonPlugin, DefaultTranslation):
     def get_helpers(self):
         return {'translate_related_list': translate_related_list,
 		'translate_resource_data_dict_list': translate_resource_data_dict_list,
-		'apps': apps, 'comuni': comuni, 'categories': categories, 'facets':facets,
+		'comuni': comuni, 'facets':facets,
 		'infograph_data': infograph_data,
 		'convert_string_to_dict': convert_string_to_dict,
 		'convert_dict_to_string': convert_dict_to_string}
