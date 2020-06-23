@@ -38,9 +38,12 @@ Example:
       {% endif %}
     {% endif %}
     {% endblock %}
-
-  <div>
-    <div class="api add-info"><a href="{% url_for controller='api', action='action', logic_function='package_show', id=pkg.name, ver=3 %}">{{_('API')}}</a></div>
-    <div class="opendata add-info"><a href="{% url_for controller='package', action='read', id=pkg.name %}.rdf">{{_('RDF')}}</a></div>
-  </div>
+    <div>
+      <div class="api add-info"><a href="{% url_for controller='api', action='action', logic_function='package_show', id=pkg.name, ver=3 %}">
+        <img src="/img/ic-api.png"></img>
+        {{_('API')}}</a></div>
+      <div class="opendata add-info"><a href="{% url_for controller='package', action='read', id=pkg.name %}.rdf">
+        <img src="/img/ic-linked.png"></img>
+        {{_('RDF')}}</a></div>
+    </div>
 </section>

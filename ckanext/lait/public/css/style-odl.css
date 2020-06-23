@@ -892,14 +892,15 @@ h3 {
 
 .resources ul {
   margin: 0;
+  padding: 0 10px;
   list-style-type: none;
 }
 
 .resources li div {
   float: left;
   margin-right: 10px;
-  height: 90px;
-  width: 85px;
+  height: 95px;
+  width: 65px;
   margin-top: 0px !important;
 }
 
@@ -912,12 +913,12 @@ h3 {
 /***lista icone **/
 
 .resources div.ic {
-  background: url(../img/ic-dataset-in.png) no-repeat;
-  color: white;
+  background: url(../img/ic-dataset-in.png) no-repeat top center;
+  color: #94c21f;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 80px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .resources p {
@@ -1048,16 +1049,6 @@ input.check[type="checkbox"] {
 
 .resources div.api {
   border-right: 1px solid #ccc;
-}
-
-.resources div.api:before {
-  content: url("../img/ic-api.png");
-  float: left;
-}
-
-.resources div.opendata:after {
-  content: url("../img/ic-linked.png");
-  float: left;
 }
 
 /**tags + utilizzo+ rating**/
