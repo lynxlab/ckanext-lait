@@ -131,3 +131,8 @@ li.ris:not(.icon) {
     display: inline-block;
     min-width: 120px;
 }
+
+.add-info img {
+    height: 29px;
+    width: auto;
+}
