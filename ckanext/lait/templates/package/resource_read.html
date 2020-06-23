@@ -50,6 +50,7 @@
           <ul>
             {% block resource_actions_inner %}
             {% if c.userobj!=None and (res.format|lower=='wms' or res.format|lower=='geojson' or res.format|lower=='csv') %}
+              <!--
               <li>
                 <script type="text/javascript">
                   function improve(){
@@ -64,7 +65,9 @@
                 <button id="improve" type="button" class="btn btn-improve" onclick="improve();">
                   {{ _('Improve the data') }}
                 </button>
-            {% endif %}
+              </li>
+              -->
+            {%  endif %}
             {% if h.check_access('package_update', {'id':pkg.id }) %}
               <li>{% link_for _('Manage'), controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn', icon='wrench' %}</li>
             {% endif %}
