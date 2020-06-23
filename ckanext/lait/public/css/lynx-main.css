@@ -33,7 +33,7 @@
     width: 45%;
 }
 
-.controls select:focus, 
+.controls select:focus,
 #geographical_geonames_url-store:focus,
 #geographical_geonames_url-view:focus,
 .controls:not(.editor) .input-prepend input:focus,
@@ -99,7 +99,7 @@
 }
 
 /*
- * dataset page search button 
+ * dataset page search button
  */
 form.search-form .search-input-group .input-group-btn button {
     padding: 12px;
@@ -107,6 +107,27 @@ form.search-form .search-input-group .input-group-btn button {
     border-bottom-left-radius: 0;
 }
 
+/*
+ * reorder resoources
+ */
 ul.resource-list.ui-sortable.reordering {
     margin-top: 15px;
+}
+
+/*
+ * dataset list
+ */
+ul.dataset-list.risultati {
+    padding:0;
+}
+
+ul.dataset-list.risultati li.dataset-item {
+    padding: 20px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+li.ris:not(.icon) {
+    display: inline-block;
+    min-width: 120px;
 }
