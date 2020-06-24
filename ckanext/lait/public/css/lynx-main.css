@@ -129,7 +129,7 @@ ul.dataset-list.risultati li.dataset-item {
 
 li.ris:not(.icon) {
     display: inline-block;
-    min-width: 120px;
+    min-width: 150px;
 }
 
 .add-info img {
