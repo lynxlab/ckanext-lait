@@ -1,17 +1,31 @@
 <section class="tags">
-{% if groups[0] and groups[0].get("name") is defined and groups[0].get("name")|length %}
-    <img class="category-icon-medium" src="/catalog/img/groups/{{ groups[0].get("name") }}.png" />
-{% endif %}
+  {% if groups[0] and groups[0].get("name") is defined and groups[0].get("name")|length %}
+    <img src="{{ groups[0].image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ groups[0].name }}" class="category-icon-medium">
+    <!-- img class="category-icon-medium" src="/catalog/img/groups/{{ groups[0].get("name") }}.png" / -->
+  {% endif %}
 
 <div class="category-tags">
 		<ul>
 		{% if groups[0] and groups[0].get("name") is defined and groups[0].get("name")|length %}
-			<li><span>{{ _('Gruppo') }}</span>: <a href="{% url_for controller='package', action='search', category=groups[0].get("name") %}">{{ groups[0].get("name") }}</a></li>
+		<li><span>{{ _('Gruppo') }}</span>:
+			{% for group in groups %}
+				{% set type = group.type or 'group' %}
+				{% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
+				<!-- href="{{ url }}" title="{{ _('View {name}').format(name=group.display_name) }}" -->
+				<a href="{% url_for controller='package', action='search', category=group.name %}">{{ group.display_name }}</a>
+				{% if groups[loop.index] is defined -%}
+					|
+				{%- endif %}
+			{% endfor %}
+		</li>
 		{% endif %}
 		{% if tags %}
 			<li><span>{{ _('Tags') }}</span>:
 			{% for tag in tags %}
-				<a href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a> |
+				<a href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+				{% if tags[loop.index] is defined -%}
+					|
+				{%- endif %}
 			{% endfor %}
 			</li>
 		{% endif %}
