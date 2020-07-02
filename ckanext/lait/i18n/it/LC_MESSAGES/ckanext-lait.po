@@ -8,53 +8,47 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-lait 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-18 14:25+0200\n"
-"PO-Revision-Date: 2020-06-18 17:46+0200\n"
+"POT-Creation-Date: 2020-07-02 15:12+0200\n"
+"PO-Revision-Date: 2020-07-02 15:13+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
 "Language-Team: it <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"Last-Translator: stefano <steve@lynxlab.com>\n"
-"X-Generator: Poedit 2.3.1\n"
 
-#: ckanext/lait/plugin.py:137 ckanext/lait/templates/organization/index.html:3
-#: ckanext/lait/templates/organization/index.html:6
-#: ckanext/lait/templates/organization/index.html:18
+#: ckanext/lait/plugin.py:79
+#: ckanext/lait/templates/organization-disabled/index.html:3
+#: ckanext/lait/templates/organization-disabled/index.html:6
+#: ckanext/lait/templates/organization-disabled/index.html:18
 #: ckanext/lait/templates/package/base.html:16
 msgid "Organizations"
 msgstr "Organizzazioni"
 
-#: ckanext/lait/plugin.py:138 ckanext/lait/templates/category/index.html:3
-#: ckanext/lait/templates/category/index.html:6
-#: ckanext/lait/templates/category/index.html:12
+#: ckanext/lait/plugin.py:80
 msgid "Categories"
 msgstr "Categorie"
 
-#: ckanext/lait/plugin.py:139
-#: ckanext/lait/templates/package/snippets/rating.html:5
-#: ckanext/lait/templates/snippets/package_item.html:105
+#: ckanext/lait/plugin.py:81 ckanext/lait/templates/package/snippets/rating.html:5 ckanext/lait/templates/snippets/package_item.html:105
 msgid "Community Rating"
 msgstr "Rating della Comunità"
 
-#: ckanext/lait/plugin.py:140
-#: ckanext/lait/templates/package/snippets/tags.html:12
+#: ckanext/lait/plugin.py:82 ckanext/lait/templates/package/snippets/package_basic_fields.html:24 ckanext/lait/templates/package/snippets/tags.html:23
 #: ckanext/lait/templates/snippets/package_item.html:87
 msgid "Tags"
 msgstr "Tag"
 
-#: ckanext/lait/plugin.py:141
-#: ckanext/lait/templates/snippets/package_item.html:97
+#: ckanext/lait/plugin.py:83 ckanext/lait/templates/snippets/package_item.html:97
 msgid "Formats"
 msgstr "Formati"
 
-#: ckanext/lait/plugin.py:142
+#: ckanext/lait/plugin.py:84
 msgid "Licenses"
 msgstr "Licenze"
 
-#: ckanext/lait/plugin.py:327
+#: ckanext/lait/plugin.py:268
 msgid "Unauthorized to access translator"
 msgstr "Non sei autorizzato a modificare la traduzione"
 
@@ -71,116 +65,122 @@ msgstr "non posso caricare l'anteprima"
 msgid "Portal search"
 msgstr "Ricerca sul portale"
 
-#: ckanext/lait/templates/app/index.html:4
-#: ckanext/lait/templates/app/index.html:7
-#: ckanext/lait/templates/app/index.html:13
-msgid "Apps"
-msgstr "App"
+#: ckanext/lait/templates/header.html:69
+msgid "Home"
+msgstr "Home"
 
-#: ckanext/lait/templates/app/index.html:28
-msgid "Search Apps"
-msgstr "Cerca App"
+#: ckanext/lait/templates/header.html:74 ckanext/lait/templates/header.html:78
+msgid "Data"
+msgstr "Dati"
 
-#: ckanext/lait/templates/app/index.html:31
-#: ckanext/lait/templates/snippets/search_form_bak.html:15
-msgid "Submit"
-msgstr "Invia"
+#: ckanext/lait/templates/header.html:79
+#: ckanext/lait/templates/package/read_base.html:24
+msgid "Dataset"
+msgstr "Dataset"
 
-#: ckanext/lait/templates/app/index.html:36
-msgid "{number} app found for \"{query}\""
-msgid_plural "{number} apps found for \"{query}\""
-msgstr[0] "Trovata {number} app per \"{query}\""
-msgstr[1] "Trovate {number} app per \"{query}\""
+#: ckanext/lait/templates/header.html:82
+msgid "Geographic data"
+msgstr "Dati geografici"
 
-#: ckanext/lait/templates/app/index.html:37
-msgid "No apps found for \"{query}\""
-msgstr "Nessuna app trovata per \"{query}\""
+#: ckanext/lait/templates/header.html:84
+msgid "Search organization"
+msgstr "Cerca organizzazione"
 
-#: ckanext/lait/templates/app/index.html:38
-msgid "{number} app found"
-msgid_plural "{number} apps found"
-msgstr[0] "Trovata {number} app"
-msgstr[1] "Trovate {number} app"
+#: ckanext/lait/templates/header.html:85
+msgid "Search category"
+msgstr "Cerca categoria"
 
-#: ckanext/lait/templates/app/index.html:49
-msgid "No apps found"
-msgstr "Nessuna app trovata"
+#: ckanext/lait/templates/header.html:91
+msgid "Linked data"
+msgstr "Linked data"
 
-#: ckanext/lait/templates/app/index.html:62
-msgid "There are currently no apps for this site"
-msgstr "Al momento non ci sono app per questo sito"
+#: ckanext/lait/templates/header.html:94
+msgid "Send your dataset"
+msgstr "Invia il tuo dataset"
 
-#: ckanext/lait/templates/app/snippets/app_item.html:4
-#: ckanext/lait/templates/related/snippets/related_item.html:16
-msgid "Go to {related_item_type}"
-msgstr "Vai a {related_item_type}"
+#: ckanext/lait/templates/header.html:100
+#: ckanext/lait/templates/header.html:105
+msgid "Applications"
+msgstr "Applicazioni"
 
-#: ckanext/lait/templates/category/snippets/category_item.html:21
-#: ckanext/lait/templates/organization/snippets/organization_item.html:26
+#: ckanext/lait/templates/header.html:107
+msgid "Report your app"
+msgstr "Segnala la tua app"
+
+#: ckanext/lait/templates/header.html:114
+#: ckanext/lait/templates/header.html:119
+#: ckanext/lait/templates/header.html:121
+msgid "News"
+msgstr "Notizie"
+
+#: ckanext/lait/templates/header.html:124
+msgid "Contest"
+msgstr "Contest"
+
+#: ckanext/lait/templates/header.html:127
+msgid "Appointment"
+msgstr "Appuntamenti"
+
+#: ckanext/lait/templates/header.html:130
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: ckanext/lait/templates/header.html:132
+msgid "Focus"
+msgstr "Focus"
+
+#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:9
+msgid "This resource can not be previewed at the moment."
+msgstr "Questa risorsa non può essere visualizzata in anteprima in questo momento."
+
+#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:11 ckanext/lait/templates/package/resource_read.html:160
+#: ckanext/lait/templates/package/snippets/resource_view.html:34
+msgid "Click here for more information."
+msgstr "Clicca qui per maggiori informazioni."
+
+#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:18 ckanext/lait/templates/package/snippets/resource_view.html:41
+msgid "Download resource"
+msgstr "Scarica la risorsa"
+
+#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:23 ckanext/lait/templates/package/snippets/resource_view.html:64
+msgid "Your browser does not support iframes."
+msgstr "Il tuo browser non supporta gli iframes."
+
+#: ckanext/lait/templates/organization-disabled/index.html:13
+msgid "Add Organization"
+msgstr "Aggiungi Organizzazione"
+
+#: ckanext/lait/templates/organization-disabled/index.html:26
+msgid "There are currently no organizations for this site"
+msgstr "Al momento non ci sono organizzazioni per questo sito"
+
+#: ckanext/lait/templates/organization-disabled/index.html:28
+msgid "How about creating one?"
+msgstr "Che ne dici di rearne una?"
+
+#: ckanext/lait/templates/organization-disabled/snippets/helper.html:4
+msgid "What are Organizations?"
+msgstr "Cosa sono le organizzazioni?"
+
+#: ckanext/lait/templates/organization-disabled/snippets/helper.html:8
+msgid "An organization represents the data owner"
+msgstr "Un'organizzazione rappresenta l'Amministrazione o l'ente titolare dei dati"
+
+#: ckanext/lait/templates/organization-disabled/snippets/organization_item.html:26
 msgid "{num} Dataset"
 msgid_plural "{num} Datasets"
 msgstr[0] "{num} Dataset"
 msgstr[1] "{num} Dataset"
 
-#: ckanext/lait/templates/category/snippets/category_item.html:23
-#: ckanext/lait/templates/organization/snippets/organization_item.html:28
+#: ckanext/lait/templates/organization-disabled/snippets/organization_item.html:28
 msgid "0 Datasets"
-msgstr "0 Datasets"
+msgstr "0 Dataset"
 
-#: ckanext/lait/templates/category/snippets/category_item.html:27
-#: ckanext/lait/templates/category/snippets/category_item.html:28
-msgid "View {name}"
-msgstr "Visualizza {name}"
-
-#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:9
-msgid "This resource can not be previewed at the moment."
-msgstr ""
-"Questa risorsa non può essere visualizzata in anteprima in questo momento."
-
-#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:11
-#: ckanext/lait/templates/package/resource_read.html:153
-msgid "Click here for more information."
-msgstr "Clicca qui per maggiori informazioni."
-
-#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:18
-msgid "Download resource"
-msgstr "Scarica la risorsa"
-
-#: ckanext/lait/templates/dataviewer/snippets/data_preview.html:23
-msgid "Your browser does not support iframes."
-msgstr "Il tuo browser non supporta gli iframes."
-
-#: ckanext/lait/templates/organization/index.html:13
-msgid "Add Organization"
-msgstr "Aggiungi Organizzazione"
-
-#: ckanext/lait/templates/organization/index.html:26
-msgid "There are currently no organizations for this site"
-msgstr "Al momento non ci sono organizzazioni per questo sito"
-
-#: ckanext/lait/templates/organization/index.html:28
-msgid "How about creating one?"
-msgstr "Come crearne uno?"
-
-#: ckanext/lait/templates/organization/snippets/helper.html:4
-msgid "What are Organizations?"
-msgstr "Cosa sono le organizzazioni?"
-
-#: ckanext/lait/templates/organization/snippets/helper.html:8
-msgid "An organization represents the data owner"
-msgstr ""
-"Un'organizzazione rappresenta l'Amministrazione o l'ente titolare dei dati"
-
-#: ckanext/lait/templates/organization/snippets/organization_item.html:31
-#: ckanext/lait/templates/organization/snippets/organization_item.html:32
+#: ckanext/lait/templates/organization-disabled/snippets/organization_item.html:31 ckanext/lait/templates/organization-disabled/snippets/organization_item.html:32
 msgid "View {organization_name}"
 msgstr "Visualizza {organization_name}"
 
-#: ckanext/lait/templates/package/base.html:7
-#: ckanext/lait/templates/package/base.html:19
-#: ckanext/lait/templates/package/base.html:24
-#: ckanext/lait/templates/package/search.html:3
-#: ckanext/lait/templates/package/search.html:9
+#: ckanext/lait/templates/package/base.html:7 ckanext/lait/templates/package/base.html:19 ckanext/lait/templates/package/base.html:24
 #: ckanext/lait/templates/snippets/organization.html:38
 msgid "Datasets"
 msgstr "Dataset"
@@ -189,19 +189,15 @@ msgstr "Dataset"
 msgid "Create Dataset"
 msgstr "Crea un dataset"
 
-#: ckanext/lait/templates/package/read.html:11
-#: ckanext/lait/templates/snippets/package_item.html:62
+#: ckanext/lait/templates/package/read.html:11 ckanext/lait/templates/package/snippets/package_basic_fields.html:98 ckanext/lait/templates/snippets/package_item.html:62
 msgid "Private"
 msgstr "Privato"
 
-#: ckanext/lait/templates/package/read.html:18
-#: ckanext/lait/templates/snippets/package_item.html:67
+#: ckanext/lait/templates/package/read.html:18 ckanext/lait/templates/snippets/package_item.html:67
 msgid "Draft"
 msgstr "Bozza"
 
-#: ckanext/lait/templates/package/read.html:29
-#: ckanext/lait/templates/package/resource_read.html:203
-#: ckanext/lait/templates/package/resource_read_bak.html:229
+#: ckanext/lait/templates/package/read.html:29 ckanext/lait/templates/package/resource_read.html:210 ckanext/lait/templates/package/snippets/package_basic_fields.html:30
 msgid "License"
 msgstr "Licenza"
 
@@ -213,47 +209,33 @@ msgstr "Nessuna licenza indicata"
 msgid "Origin"
 msgstr "Fonte"
 
-#: ckanext/lait/templates/package/read.html:79
-#: ckanext/lait/templates/package/resource_read.html:229
-#: ckanext/lait/templates/package/resource_read_bak.html:255
+#: ckanext/lait/templates/package/read.html:79 ckanext/lait/templates/package/resource_read.html:236
 msgid "Popup comments"
 msgstr "Popup commenti"
 
-#: ckanext/lait/templates/package/read_base.html:19
-#: ckanext/lait/templates/package/resource_read.html:66
-#: ckanext/lait/templates/package/resource_read_bak.html:66
+#: ckanext/lait/templates/package/read_base.html:19 ckanext/lait/templates/package/resource_read.html:72
 msgid "Manage"
 msgstr "Gestisci"
-
-#: ckanext/lait/templates/package/read_base.html:24
-msgid "Dataset"
-msgstr "Dataset"
 
 #: ckanext/lait/templates/package/read_base.html:25
 msgid "Groups"
 msgstr "Gruppi"
 
-#: ckanext/lait/templates/package/read_base.html:26
-#: ckanext/lait/templates/package/snippets/info.html:44
-#: ckanext/lait/templates/package/snippets/info_BKP.html:44
+#: ckanext/lait/templates/package/read_base.html:26 ckanext/lait/templates/package/snippets/info.html:44
 msgid "Activity Stream"
 msgstr "Flusso di attività"
 
 #: ckanext/lait/templates/package/read_base.html:39
 #, python-format
-msgid ""
-"This is an old revision of this dataset, as edited at %(timestamp)s. It may "
-"differ significantly from the <a href=\"%(url)s\">current revision</a>."
+msgid "This is an old revision of this dataset, as edited at %(timestamp)s. It may differ significantly from the <a href=\"%(url)s\">current revision</a>."
 msgstr ""
-"Questa è una revisione precedente del dataset, come modificato in data "
-"%(timestamp)s. Potrebbe differire in modo significativo dalla <a href=\"%(url)s"
-"\">revisione attuale</a>."
+"Questa è una revisione precedente del dataset, come modificato in data %(timestamp)s. Potrebbe differire in modo significativo dalla <a href=\"%(url)s\">revisione "
+"attuale</a>."
 
 #: ckanext/lait/templates/package/read_base.html:41
 #, python-format
 msgid "This is the current revision of this dataset, as edited at %(timestamp)s."
-msgstr ""
-"Questa è la versione attuale del dataset, come modificata alle %(timestamp)s."
+msgstr "Questa è la versione attuale del dataset, come modificata alle %(timestamp)s."
 
 #: ckanext/lait/templates/package/related_list.html:5
 msgid "Related"
@@ -271,208 +253,97 @@ msgstr "Nessun elemento correlato"
 msgid "Add Related Item"
 msgstr "Aggiungi elemento correlato"
 
-#: ckanext/lait/templates/package/resource_read.html:27
-#: ckanext/lait/templates/package/resource_read_bak.html:27
+#: ckanext/lait/templates/package/resource_read.html:29
 msgid "License confirmation"
 msgstr "Conferma della licenza"
 
-#: ckanext/lait/templates/package/resource_read.html:31
-#: ckanext/lait/templates/package/resource_read_bak.html:31
+#: ckanext/lait/templates/package/resource_read.html:32
 msgid "Before proceed with the download you must read and accept the license."
-msgstr ""
-"Prima di procedere con il download devi leggere ed accettare la licenze d'uso."
+msgstr "Prima di procedere con il download devi leggere ed accettare la licenze d'uso."
 
-#: ckanext/lait/templates/package/resource_read.html:37
-#: ckanext/lait/templates/package/resource_read_bak.html:37
+#: ckanext/lait/templates/package/resource_read.html:38
 msgid "I do not agree, bring me back!"
 msgstr "Non sono d'accordo, riportami indietro!"
 
-#: ckanext/lait/templates/package/resource_read.html:38
-#: ckanext/lait/templates/package/resource_read_bak.html:38
+#: ckanext/lait/templates/package/resource_read.html:39
 msgid "OK, please proceed"
 msgstr "OK, procedi"
 
-#: ckanext/lait/templates/package/resource_read.html:62
-#: ckanext/lait/templates/package/resource_read_bak.html:62
+#: ckanext/lait/templates/package/resource_read.html:66
 msgid "Improve the data"
 msgstr "Migliora il dato"
 
-#: ckanext/lait/templates/package/resource_read.html:81
-#: ckanext/lait/templates/package/resource_read_bak.html:81
+#: ckanext/lait/templates/package/resource_read.html:87
 msgid "View"
 msgstr "Visualizza"
 
-#: ckanext/lait/templates/package/resource_read.html:83
-#: ckanext/lait/templates/package/resource_read_bak.html:83
+#: ckanext/lait/templates/package/resource_read.html:89
 msgid "API Endpoint"
 msgstr "API Endpoint"
 
-#: ckanext/lait/templates/package/resource_read.html:85
-#: ckanext/lait/templates/package/resource_read_bak.html:85
+#: ckanext/lait/templates/package/resource_read.html:91
 msgid "Download"
 msgstr "Download"
 
-#: ckanext/lait/templates/package/resource_read.html:101
-#: ckanext/lait/templates/package/resource_read_bak.html:101
+#: ckanext/lait/templates/package/resource_read.html:108
 msgid "URL:"
 msgstr "URL:"
 
-#: ckanext/lait/templates/package/resource_read.html:147
+#: ckanext/lait/templates/package/resource_read.html:154
 msgid "There are no views created for this resource yet."
-msgstr "Non ci sono viste per questa risorsa."
+msgstr "Non ci sono ancora viste per questa risorsa."
 
-#: ckanext/lait/templates/package/resource_read.html:151
+#: ckanext/lait/templates/package/resource_read.html:158
 msgid "Not seeing the views you were expecting?"
 msgstr "Non vedi le viste che ti aspettavi?"
 
-#: ckanext/lait/templates/package/resource_read.html:156
+#: ckanext/lait/templates/package/resource_read.html:163
 msgid "Here are some reasons you may not be seeing expected views:"
 msgstr "Ecco alcune ragioni per cui non vedi le viste che ti aspettavi:"
 
-#: ckanext/lait/templates/package/resource_read.html:158
+#: ckanext/lait/templates/package/resource_read.html:165
 msgid "No view has been created that is suitable for this resource"
-msgstr ""
-"N\n"
-"on è stata creata nessuna vista adatta per questa risorsa"
+msgstr "Non è stata creata nessuna vista adatta per questa risorsa"
 
-#: ckanext/lait/templates/package/resource_read.html:159
+#: ckanext/lait/templates/package/resource_read.html:166
 msgid "The site administrators may not have enabled the relevant view plugins"
-msgstr ""
-"G\n"
-"li amministratori potrebbero non aver abilitato il plugin di questa vista"
+msgstr "Gli amministratori potrebbero non aver abilitato il plugin di questa vista"
 
-#: ckanext/lait/templates/package/resource_read.html:160
+#: ckanext/lait/templates/package/resource_read.html:167
 msgid ""
-"If a view requires the DataStore, the DataStore plugin may not be enabled, or "
-"the data may not have been pushed to the DataStore, or the DataStore hasn't "
-"finished processing the data yet"
+"If a view requires the DataStore, the DataStore plugin may not be enabled, or the data may not have been pushed to the DataStore, or the DataStore hasn't finished "
+"processing the data yet"
 msgstr ""
-"Se una vista richeide il  DataStore, i plugin del DataStore potrebbero non "
-"essere abilitati, o i dati potrebbero non essere stati inviati al DataStore,  "
-"o il DataStore non ha finito di processarli"
+"Se una vista richeide il  DataStore, i plugin del DataStore potrebbero non essere abilitati, o i dati potrebbero non essere stati inviati al DataStore,  o il DataStore "
+"non ha finito di processarli"
 
-#: ckanext/lait/templates/package/resource_read.html:181
-#: ckanext/lait/templates/package/resource_read_bak.html:207
+#: ckanext/lait/templates/package/resource_read.html:188
 msgid "Additional Information"
 msgstr "Informazioni supplementari"
 
-#: ckanext/lait/templates/package/resource_read.html:185
-#: ckanext/lait/templates/package/resource_read_bak.html:211
+#: ckanext/lait/templates/package/resource_read.html:192
 msgid "Field"
 msgstr "Campo"
 
-#: ckanext/lait/templates/package/resource_read.html:186
-#: ckanext/lait/templates/package/resource_read_bak.html:212
+#: ckanext/lait/templates/package/resource_read.html:193
 msgid "Value"
 msgstr "Valore"
 
-#: ckanext/lait/templates/package/resource_read.html:191
-#: ckanext/lait/templates/package/resource_read_bak.html:217
+#: ckanext/lait/templates/package/resource_read.html:198
 msgid "Last updated"
 msgstr "Ultimo aggiornamento"
 
-#: ckanext/lait/templates/package/resource_read.html:192
-#: ckanext/lait/templates/package/resource_read.html:196
-#: ckanext/lait/templates/package/resource_read.html:200
-#: ckanext/lait/templates/package/resource_read_bak.html:218
-#: ckanext/lait/templates/package/resource_read_bak.html:222
-#: ckanext/lait/templates/package/resource_read_bak.html:226
+#: ckanext/lait/templates/package/resource_read.html:199 ckanext/lait/templates/package/resource_read.html:203 ckanext/lait/templates/package/resource_read.html:207
 msgid "unknown"
 msgstr "sconosciuto"
 
-#: ckanext/lait/templates/package/resource_read.html:195
-#: ckanext/lait/templates/package/resource_read_bak.html:221
+#: ckanext/lait/templates/package/resource_read.html:202
 msgid "Created"
 msgstr "Creato"
 
-#: ckanext/lait/templates/package/resource_read.html:199
-#: ckanext/lait/templates/package/resource_read_bak.html:225
+#: ckanext/lait/templates/package/resource_read.html:206
 msgid "Format"
 msgstr "Formato"
-
-#: ckanext/lait/templates/package/resource_read_bak.html:122
-msgid "Grafico"
-msgstr "Grafico"
-
-#: ckanext/lait/templates/package/resource_read_bak.html:129
-msgid "Data"
-msgstr "Dati"
-
-#: ckanext/lait/templates/package/resource_read_bak.html:148
-msgid "Filtri attivi"
-msgstr "Filtri attivi"
-
-#: ckanext/lait/templates/package/resource_read_bak.html:168
-msgid "Scarica come SVG"
-msgstr "Scarica come SVG"
-
-#: ckanext/lait/templates/package/resource_read_bak.html:176
-#: ckanext/lait/templates/package/search.html:7
-msgid "Search on map"
-msgstr "Cerca su mappa"
-
-#: ckanext/lait/templates/package/search.html:19
-msgid "Add Dataset"
-msgstr "Aggiungi un dataset"
-
-#: ckanext/lait/templates/package/search.html:32
-msgid "Relevance"
-msgstr "Rilevanza"
-
-#: ckanext/lait/templates/package/search.html:33
-#: ckanext/lait/templates/snippets/search_form_bak.html:4
-msgid "Name Ascending"
-msgstr "Nome Crescente"
-
-#: ckanext/lait/templates/package/search.html:34
-#: ckanext/lait/templates/snippets/search_form_bak.html:4
-msgid "Name Descending"
-msgstr "Nome Decrescente"
-
-#: ckanext/lait/templates/package/search.html:35
-msgid "Last Modified"
-msgstr "Ultima modifica"
-
-#: ckanext/lait/templates/package/search.html:36
-msgid "Popular"
-msgstr "Popolare"
-
-#: ckanext/lait/templates/package/search.html:54
-#: ckanext/lait/templates/package/snippets/resources_list.html:33
-#: ckanext/lait/templates/package/snippets/resources_list_multilang.html:43
-msgid "API"
-msgstr "API"
-
-#: ckanext/lait/templates/package/search.html:55
-msgid "API Docs"
-msgstr "Documentazione API"
-
-#: ckanext/lait/templates/package/search.html:57
-msgid "full {format} dump"
-msgstr "dump {format} completo"
-
-#: ckanext/lait/templates/package/search.html:58
-#, python-format
-msgid ""
-" You can also access this registry using the %(api_link)s (see "
-"%(api_doc_link)s) or download a %(dump_link)s. "
-msgstr ""
-"È possibile inoltre accedere al registro usando le %(api_link)s vedi "
-"%(api_doc_link)s o scaricarlo da %(dump_link)s."
-
-#: ckanext/lait/templates/package/search.html:62
-#, python-format
-msgid ""
-" You can also access this registry using the %(api_link)s (see "
-"%(api_doc_link)s). "
-msgstr ""
-"È possibile inoltre accedere al registro usando le %(api_link)s vedi "
-"%(api_doc_link)s"
-
-#: ckanext/lait/templates/package/search.html:80
-#: ckanext/lait/templates/snippets/search_form_bak.html:3
-msgid "Search datasets..."
-msgstr "Cerca dataset..."
 
 #: ckanext/lait/templates/package/snippets/additional_info.html:6
 msgid "Category"
@@ -482,106 +353,174 @@ msgstr "Categoria"
 msgid "GeoJson not valid"
 msgstr "GeoJson non valido"
 
-#: ckanext/lait/templates/package/snippets/info.html:15
-#: ckanext/lait/templates/package/snippets/info_BKP.html:15
+#: ckanext/lait/templates/package/snippets/info.html:15 ckanext/lait/templates/package/snippets/package_basic_fields.html:76
 #: ckanext/lait/templates/snippets/organization.html:20
 msgid "Organization"
 msgstr "Organizzazione"
 
-#: ckanext/lait/templates/package/snippets/info.html:19
-#: ckanext/lait/templates/package/snippets/info.html:21
-#: ckanext/lait/templates/package/snippets/info_BKP.html:19
-#: ckanext/lait/templates/package/snippets/info_BKP.html:21
+#: ckanext/lait/templates/package/snippets/info.html:19 ckanext/lait/templates/package/snippets/info.html:21
 msgid "Author"
 msgstr "Autore"
 
-#: ckanext/lait/templates/package/snippets/info.html:26
-#: ckanext/lait/templates/package/snippets/info.html:28
-#: ckanext/lait/templates/package/snippets/info_BKP.html:26
-#: ckanext/lait/templates/package/snippets/info_BKP.html:28
+#: ckanext/lait/templates/package/snippets/info.html:26 ckanext/lait/templates/package/snippets/info.html:28
 msgid "Maintainer"
 msgstr "Responsabile"
 
-#: ckanext/lait/templates/package/snippets/info.html:31
-#: ckanext/lait/templates/package/snippets/info_BKP.html:31
-#: ckanext/lait/templates/snippets/package_item.html:76
+#: ckanext/lait/templates/package/snippets/info.html:31 ckanext/lait/templates/snippets/package_item.html:76
 msgid "Created on"
 msgstr "Creato il"
 
-#: ckanext/lait/templates/package/snippets/info.html:33
-#: ckanext/lait/templates/package/snippets/info_BKP.html:33
-#: ckanext/lait/templates/snippets/package_item.html:74
+#: ckanext/lait/templates/package/snippets/info.html:33 ckanext/lait/templates/snippets/package_item.html:74
 msgid "Updated on"
 msgstr "Aggiornato il"
 
 #: ckanext/lait/templates/package/snippets/info.html:36
-#: ckanext/lait/templates/package/snippets/info_BKP.html:36
 msgid "Update frequency"
 msgstr "Frequenza di aggiornamento"
 
 #: ckanext/lait/templates/package/snippets/info.html:39
-#: ckanext/lait/templates/package/snippets/info_BKP.html:39
 msgid "Temporal period"
 msgstr "Periodo temporale"
 
 #: ckanext/lait/templates/package/snippets/info.html:42
-#: ckanext/lait/templates/package/snippets/info_BKP.html:42
 msgid "Openess rating"
 msgstr "Livello di apertura"
 
-#: ckanext/lait/templates/package/snippets/info.html:46
-#: ckanext/lait/templates/package/snippets/info_BKP.html:46
-#: ckanext/lait/templates/snippets/organization.html:34
+#: ckanext/lait/templates/package/snippets/info.html:46 ckanext/lait/templates/snippets/organization.html:34
 msgid "Followers"
 msgstr "Sostenitori"
 
 #: ckanext/lait/templates/package/snippets/info.html:54
-#: ckanext/lait/templates/package/snippets/info_BKP.html:54
 msgid "Location"
 msgstr "Localizzazione"
 
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:4 ckanext/lait/templates/related/snippets/related_form.html:18
+msgid "Title"
+msgstr "Titolo"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:4
+msgid "eg. A descriptive title"
+msgstr "p.es.  Un titolo descrittivo"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:13 ckanext/lait/templates/related/snippets/related_form.html:19
+msgid "URL"
+msgstr "URL"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:13
+msgid "eg. my-dataset"
+msgstr "p.es. il-mio-dataset"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:19 ckanext/lait/templates/related/snippets/related_form.html:21
+msgid "Description"
+msgstr "Descrizione"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:19
+msgid "eg. Some useful notes about the data"
+msgstr "p.es. Alcune note utili a proposito dei dati"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:24
+msgid "eg. economy, mental health, government"
+msgstr "p.es. economia, salute, governo"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:45
+msgid " License definitions and additional information can be found at <a href=\"http://opendefinition.org/licenses/\">opendefinition.org</a> "
+msgstr " La definizione delle licenze e alcune informazioni addizionali possono essere trovate qui: <a href=\"http://opendefinition.org/licenses/\">opendefinition.org</a> "
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:80
+msgid "No organization"
+msgstr "Nessun'organizzazione"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:95
+msgid "Visibility"
+msgstr "Visibilità"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:98
+msgid "Public"
+msgstr "Pubblico"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:114
+msgid "State"
+msgstr "Stato"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:117
+msgid "Active"
+msgstr "Attivo"
+
+#: ckanext/lait/templates/package/snippets/package_basic_fields.html:118 ckanext/lait/templates/snippets/package_item.html:69
+msgid "Deleted"
+msgstr "Eliminato"
+
 #: ckanext/lait/templates/package/snippets/resource_item_multilang.html:7
 msgid "Available in language"
-msgstr "Linguaggio disponibile"
+msgstr "Disponibile in"
 
-#: ckanext/lait/templates/package/snippets/resources_list.html:13
-#: ckanext/lait/templates/package/snippets/resources_list_multilang.html:17
+#: ckanext/lait/templates/package/snippets/resource_view.html:10
+msgid "Fullscreen"
+msgstr "A tutto schermo"
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:18
+msgid "Embed"
+msgstr "Incorpora"
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:32
+msgid "This resource view is not available at the moment."
+msgstr "Questa vista sulla risorsa  non è disponibile al momento."
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:74
+msgid "Embed resource view"
+msgstr "Incorpora la vista della risorsa"
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:77
+msgid "You can copy and paste the embed code into a CMS or blog software that supports raw HTML"
+msgstr "Puoi copiare e incollare il codice sorgente in un CMS  che supporta HTML"
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:80
+msgid "Width"
+msgstr "Larghezza"
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:83
+msgid "Height"
+msgstr "Altezza"
+
+#: ckanext/lait/templates/package/snippets/resource_view.html:86
+msgid "Code"
+msgstr "Codice"
+
+#: ckanext/lait/templates/package/snippets/resources_list.html:13 ckanext/lait/templates/package/snippets/resources_list_multilang.html:17
 msgid "Data and Resources"
 msgstr "Dati e Risorse"
 
 #: ckanext/lait/templates/package/snippets/resources_list.html:26
 #, python-format
-msgid ""
-" <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not add "
-"some?</a> "
-msgstr ""
-" <p class=\"empty\">Questo dataset non possiede dati, <a href=\"%(url)s"
-"\">perché non aggiungerne?</a> "
+msgid " <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not add some?</a> "
+msgstr " <p class=\"empty\">Questo dataset non possiede dati, <a href=\"%(url)s\">perché non aggiungerne?</a> "
 
-#: ckanext/lait/templates/package/snippets/resources_list.html:34
-#: ckanext/lait/templates/package/snippets/resources_list_multilang.html:44
+#: ckanext/lait/templates/package/snippets/resources_list.html:35 ckanext/lait/templates/package/snippets/resources_list_multilang.html:44
+msgid "API"
+msgstr "API"
+
+#: ckanext/lait/templates/package/snippets/resources_list.html:38 ckanext/lait/templates/package/snippets/resources_list_multilang.html:47
 msgid "RDF"
 msgstr "RDF"
 
 #: ckanext/lait/templates/package/snippets/resources_list_multilang.html:33
 #, python-format
-msgid ""
-" <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not add "
-"some?</a></p> "
-msgstr ""
-" <p class=\"empty\">Questo dataset non possiede dati, <a href=\"%(url)s"
-"\">perché non aggiungerne?</a></p> "
+msgid " <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not add some?</a></p> "
+msgstr " <p class=\"empty\">Questo dataset non possiede dati, <a href=\"%(url)s\">perché non aggiungerne?</a></p> "
 
 #: ckanext/lait/templates/package/snippets/resources_list_multilang.html:37
 msgid "This dataset has no data"
 msgstr "Questo dataset non ha dati"
 
-#: ckanext/lait/templates/package/snippets/tags.html:9
+#: ckanext/lait/templates/package/snippets/tags.html:10
 msgid "Gruppo"
 msgstr "Gruppo"
 
-#: ckanext/lait/templates/partials/topline.html:85
-#: ckanext/lait/templates/partials/topline.html:87
+#: ckanext/lait/templates/package/snippets/tags.html:14
+msgid "View {name}"
+msgstr "Visualizza {name}"
+
+#: ckanext/lait/templates/partials/topline.html:85 ckanext/lait/templates/partials/topline.html:87
 msgid "Log out"
 msgstr "Esci"
 
@@ -590,16 +529,8 @@ msgid "The form contains invalid entries:"
 msgstr "Il form contiene dati non validi:"
 
 #: ckanext/lait/templates/related/snippets/related_form.html:18
-msgid "Title"
-msgstr "Titolo"
-
-#: ckanext/lait/templates/related/snippets/related_form.html:18
 msgid "My Related Item"
 msgstr "Il mio elemento correlato"
-
-#: ckanext/lait/templates/related/snippets/related_form.html:19
-msgid "URL"
-msgstr "URL"
 
 #: ckanext/lait/templates/related/snippets/related_form.html:19
 msgid "http://example.com/"
@@ -612,10 +543,6 @@ msgstr "URL dell'immagine"
 #: ckanext/lait/templates/related/snippets/related_form.html:20
 msgid "http://example.com/image.png"
 msgstr "http://example.com/image.png"
-
-#: ckanext/lait/templates/related/snippets/related_form.html:21
-msgid "Description"
-msgstr "Descrizione"
 
 #: ckanext/lait/templates/related/snippets/related_form.html:21
 msgid "A little information about the item..."
@@ -637,10 +564,13 @@ msgstr "Elimina"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ckanext/lait/templates/related/snippets/related_form.html:33
-#: ckanext/lait/templates/translator/index.html:81
+#: ckanext/lait/templates/related/snippets/related_form.html:33 ckanext/lait/templates/translator/index.html:81
 msgid "Save"
 msgstr "Salva"
+
+#: ckanext/lait/templates/related/snippets/related_item.html:16
+msgid "Go to {related_item_type}"
+msgstr "Vai a {related_item_type}"
 
 #: ckanext/lait/templates/related/snippets/related_item.html:36
 msgid "Edit"
@@ -658,16 +588,11 @@ msgstr "Mostra solo {facet_type} popolari"
 msgid "There are no {facet_type} that match this search"
 msgstr "Non ci sono {facet_type} che corrispondono a questa ricerca"
 
-#: ckanext/lait/templates/snippets/package_item.html:69
-msgid "Deleted"
-msgstr "Eliminato"
-
 #: ckanext/lait/templates/snippets/package_item.html:81
 msgid "Published by"
 msgstr "Pubblicato da"
 
-#: ckanext/lait/templates/snippets/package_item.html:93
-#: ckanext/lait/templates/snippets/package_item.html:110
+#: ckanext/lait/templates/snippets/package_item.html:93 ckanext/lait/templates/snippets/package_item.html:110
 msgid "None"
 msgstr "Nessuno"
 
@@ -675,28 +600,41 @@ msgstr "Nessuno"
 msgid "Total voters"
 msgstr "Totale votanti"
 
-#: ckanext/lait/templates/snippets/search_form_bak.html:29
+#: ckanext/lait/templates/snippets/search_form.html:4
+msgid "Search datasets..."
+msgstr "Cerca datasets..."
+
+#: ckanext/lait/templates/snippets/search_form.html:5
+msgid "Name Ascending"
+msgstr "Nome Crescente"
+
+#: ckanext/lait/templates/snippets/search_form.html:5
+msgid "Name Descending"
+msgstr "Nome Decrescente"
+
+#: ckanext/lait/templates/snippets/search_form.html:17
+msgid "Submit"
+msgstr "Invia"
+
+#: ckanext/lait/templates/snippets/search_form.html:31
 msgid "Order by"
 msgstr "Ordina per"
 
-#: ckanext/lait/templates/snippets/search_form_bak.html:37
+#: ckanext/lait/templates/snippets/search_form.html:39
 msgid "Go"
 msgstr "Vai"
 
-#: ckanext/lait/templates/snippets/search_form_bak.html:63
+#: ckanext/lait/templates/snippets/search_form.html:67
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: ckanext/lait/templates/snippets/search_form_bak.html:74
+#: ckanext/lait/templates/snippets/search_form.html:78
 msgid " <p class=\"extra\">Please try another search.</p> "
 msgstr " <p class=\"extra\">Per favore effettua un'altra ricerca.</p> "
 
-#: ckanext/lait/templates/snippets/search_form_bak.html:80
-msgid ""
-" <p><strong>There was an error while searching.</strong> Please try again.</p> "
-msgstr ""
-" <p><strong>E' stato riscontrato un errore durante la ricerca.</strong> Per "
-"favore prova di nuovo.</p> "
+#: ckanext/lait/templates/snippets/search_form.html:84
+msgid " <p><strong>There was an error while searching.</strong> Please try again.</p> "
+msgstr " <p><strong>E' stato riscontrato un errore durante la ricerca.</strong> Per favore prova di nuovo.</p> "
 
 #: ckanext/lait/templates/snippets/search_result_text.html:15
 msgid "{number} dataset found for \"{query}\""
@@ -721,7 +659,7 @@ msgstr "Nessun dataset trovato"
 #: ckanext/lait/templates/snippets/search_result_text.html:21
 msgid "{number} group found for \"{query}\""
 msgid_plural "{number} groups found for \"{query}\""
-msgstr[0] "Trovato {number} gruppo per \"{query}\""
+msgstr[0] "Trovato {number} gruppo/i per \"{query}\""
 msgstr[1] "Trovati {number} gruppi per \"{query}\""
 
 #: ckanext/lait/templates/snippets/search_result_text.html:22
@@ -731,7 +669,7 @@ msgstr "Nessun gruppo trovato per \"{query}\""
 #: ckanext/lait/templates/snippets/search_result_text.html:23
 msgid "{number} group found"
 msgid_plural "{number} groups found"
-msgstr[0] "Trovato {number} gruppo"
+msgstr[0] "Trovato {number} gruppo/i"
 msgstr[1] "Trovati {number} gruppi"
 
 #: ckanext/lait/templates/snippets/search_result_text.html:24
@@ -741,7 +679,7 @@ msgstr "Nessun gruppo trovato"
 #: ckanext/lait/templates/snippets/search_result_text.html:27
 msgid "{number} organization found for \"{query}\""
 msgid_plural "{number} organizations found for \"{query}\""
-msgstr[0] "Trovata {number} organizzazione per \"{query}\""
+msgstr[0] "Trovata {number} organizzazione/i per \"{query}\""
 msgstr[1] "Trovate {number} organizzazioni per \"{query}\""
 
 #: ckanext/lait/templates/snippets/search_result_text.html:28
@@ -751,7 +689,7 @@ msgstr "Nessuna organizzazione trovata per \"{query}\""
 #: ckanext/lait/templates/snippets/search_result_text.html:29
 msgid "{number} organization found"
 msgid_plural "{number} organizations found"
-msgstr[0] "Trovata {number} organizzazione"
+msgstr[0] "Trovata {number} organizzazione/i"
 msgstr[1] "Trovate {number} organizzazioni"
 
 #: ckanext/lait/templates/snippets/search_result_text.html:30
@@ -762,8 +700,7 @@ msgstr "Nessuna organizzazione trovata"
 msgid "Share"
 msgstr "Condividi"
 
-#: ckanext/lait/templates/translator/index.html:3
-#: ckanext/lait/templates/translator/index.html:6
+#: ckanext/lait/templates/translator/index.html:3 ckanext/lait/templates/translator/index.html:6
 msgid "Translator"
 msgstr "Traduttore"
 
@@ -775,8 +712,7 @@ msgstr "Cerca nei termini"
 msgid "terms found"
 msgstr "termini trovati"
 
-#: ckanext/lait/templates/translator/index.html:28
-#: ckanext/lait/templates/translator/index.html:40
+#: ckanext/lait/templates/translator/index.html:28 ckanext/lait/templates/translator/index.html:40
 msgid "Translated"
 msgstr "Tradotti"
 
@@ -815,3 +751,107 @@ msgstr "Traduzione salvata correttamente"
 #: ckanext/lait/templates/translator/index.html:88
 msgid "Error saving translation"
 msgstr "Errore durante il salvataggio"
+
+#: ckanext/reclineview/theme/public/recline_view.js:79 ckanext/reclineview/theme/public/recline_view.min.js:5
+msgid "Could not load view"
+msgstr "Non è stato possibile caricare la vista"
+
+#: ckanext/reclineview/theme/public/recline_view.js:81 ckanext/reclineview/theme/public/recline_view.min.js:5
+msgid "DataStore returned an error"
+msgstr "Il DataStore ha restituito un errore"
+
+#: ckanext/reclineview/theme/public/recline_view.js:83 ckanext/reclineview/theme/public/recline_view.min.js:5
+msgid "DataProxy returned an error"
+msgstr "Il DataProxy ha restituito un errore"
+
+#: ckanext/reclineview/theme/public/recline_view.js:197 ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Grid"
+msgstr "Griglia"
+
+#: ckan/public-bs2/base/javascript/modules/activity-stream.js:97 ckan/public-bs2/base/javascript/modules/popover-context.js:62
+#: ckan/public/base/javascript/modules/activity-stream.js:97 ckan/public/base/javascript/modules/activity-stream.min.js:2
+#: ckan/public/base/javascript/modules/popover-context.js:62 ckan/public/base/javascript/modules/popover-context.min.js:2
+#: ckan/templates/tests/mock_json_resource_preview_template.html:7 ckan/templates/tests/mock_resource_preview_template.html:7
+#: ckanext/datastore/templates-bs2/package/snippets/data_api_button.html:8 ckanext/datastore/templates/package/snippets/data_api_button.html:7
+#: ckanext/example_theme_docs/v18_snippet_api/fanstatic/example_theme_popover.js:21 ckanext/example_theme_docs/v18_snippet_api/fanstatic/example_theme_popover.min.js:1
+#: ckanext/example_theme_docs/v19_01_error/fanstatic/example_theme_popover.js:21 ckanext/example_theme_docs/v19_01_error/fanstatic/example_theme_popover.min.js:1
+#: ckanext/example_theme_docs/v19_02_error_handling/fanstatic/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v19_02_error_handling/fanstatic/example_theme_popover.min.js:1 ckanext/example_theme_docs/v20_pubsub/fanstatic/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v20_pubsub/fanstatic/example_theme_popover.min.js:1 ckanext/example_theme_docs/v21_custom_jquery_plugin/fanstatic/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v21_custom_jquery_plugin/fanstatic/example_theme_popover.min.js:1 ckanext/reclineview/theme/templates/recline_view.html:15
+#: ckanext/textview/theme/templates/text_view.html:9
+msgid "Loading..."
+msgstr "Caricando..."
+
+#: ckan/templates/package/snippets/view_form_filters.html:46 ckanext/reclineview/theme/public/recline_view.js:219 ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Filters"
+msgstr "Filtri"
+
+#: ckanext/datatablesview/plugin.py:47 ckanext/reclineview/plugin.py:137
+msgid "Table"
+msgstr "Tabella"
+
+#: ckanext/reclineview/plugin.py:110
+msgid "Data Explorer"
+msgstr "Esploratore Dati"
+
+#: ckanext/reclineview/plugin.py:240 ckanext/reclineview/theme/public/recline_view.js:211 ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Map"
+msgstr "Mappa"
+
+#: ckanext/reclineview/theme/public/recline_view.js:29 ckanext/reclineview/theme/public/recline_view.min.js:1
+msgid "error loading view"
+msgstr "errore nel caricamento della vista"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:3 ckanext/reclineview/theme/templates/recline_map_form.html:3
+msgid "Row offset"
+msgstr "Scostamento della riga"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:3 ckanext/reclineview/theme/templates/recline_map_form.html:3
+msgid "eg: 0"
+msgstr "es: 0"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:4 ckanext/reclineview/theme/templates/recline_map_form.html:4
+msgid "Number of rows"
+msgstr "Numero di righe"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:4 ckanext/reclineview/theme/templates/recline_map_form.html:4
+msgid "eg: 100"
+msgstr "es: 100"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:6
+msgid "Graph type"
+msgstr "Tipo di Grafo"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:7
+msgid "Group (Axis 1)"
+msgstr "Gruppo (Asse 1)"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:8
+msgid "Series (Axis 2)"
+msgstr "Serie (Asse 2)"
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:6
+msgid "Field type"
+msgstr "Tipo del campo"
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:7
+msgid "Latitude field"
+msgstr "Campo latitudine"
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:8
+msgid "Longitude field"
+msgstr "Campo longitudine"
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:9
+msgid "GeoJSON field"
+msgstr "Campo GeoJSON"
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:10
+msgid "Auto zoom to features"
+msgstr "Ingrandimento automatico alle funzioni"
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:11
+msgid "Cluster markers"
+msgstr "Raggruppamento di marcatori"
+

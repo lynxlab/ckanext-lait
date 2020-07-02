@@ -66,70 +66,70 @@
     <ul class="main-navigation">
       <li class="select-dropdown">
         <a href="/home" class="nav-link">
-          Home
+          {{ _('Home') }}
         </a>
       </li>
       <li class="select-dropdown">
         <a href="/catalog/{{ current_lang }}/dataset" class="dropbtn nav-link">
-          Dati <span class="caret-custom"></span>
+          {{ _('Data') }} <span class="caret-custom"></span>
         </a>
         <ul class="dropdown-content">
           <li>
-            <a href="/catalog/{{ current_lang }}/dataset" class="first-elem"> Dati </a>
-            <a href="/catalog/{{ current_lang }}/dataset">Dataset</a>
+            <a href="/catalog/{{ current_lang }}/dataset" class="first-elem"> {{ _('Data') }} </a>
+            <a href="/catalog/{{ current_lang }}/dataset">{{ _('Dataset') }}</a>
           </li>
           <li>
-            <a href="/catalog/{{ current_lang }}/dataset?res_format=wms">Dati geografici</a>
+            <a href="/catalog/{{ current_lang }}/dataset?res_format=wms">{{ _('Geographic data') }}</a>
           </li>
-          <li><a href="/catalog/{{ current_lang }}/organization">Cerca per organizzazione</a></li>
-          <li><a href="/catalog/{{ current_lang }}/group">Cerca per categoria</a></li>
+          <li><a href="/catalog/{{ current_lang }}/organization">{{ _('Search organization') }}</a></li>
+          <li><a href="/catalog/{{ current_lang }}/group">{{ _('Search category') }}</a></li>
           <!-- <li>
             <a href="/catalog/category">Cerca per categoria</a>
           </li> -->
           <li><a href="/application-programming-interface">API</a></li>
           <li>
-            <a href="//10.2.61.217/lod/">Linked data</a>
+            <a href="//10.2.61.217/lod/">{{ _('Linked data') }}</a>
           </li>
           <li>
-            <a href="/invia-il-tuo-dataset1">Invia il tuo Dataset</a>
+            <a href="/invia-il-tuo-dataset1">{{ _('Send your dataset') }}</a>
           </li>
         </ul>
       </li>
       <li class="select-dropdown">
         <a href="/applicazioni" class="dropbtn nav-link">
-          Applicazioni <span class="caret-custom"></span>
+          {{ _('Applications') }} <span class="caret-custom"></span>
         </a>
         <ul class="dropdown-content">
           <li>
             <a href="/applicazioni" class="first-elem">
-              Applicazioni
+              {{ _('Applications') }}
             </a>
-            <a href="/segnala-un-applicazione">Segnala la tua applicazione</a>
+            <a href="/segnala-un-applicazione">{{ _('Report your app') }}</a>
           </li>
           <!-- <li><a href="/catalog/{{ current_lang }}/app">Cerca App</a></li> -->
         </ul>
       </li>
       <li class="select-dropdown">
         <a href="/notizie" class="dropbtn nav-link">
-          Notizie <span class="caret-custom"></span>
+          {{ _('News') }} <span class="caret-custom"></span>
         </a>
         <ul class="dropdown-content">
           <li>
             <a href="/notizie" class="first-elem">
-              Notizie
+              {{ _('News') }}
             </a>
-            <a href="/news">Notizie</a>
+            <a href="/news">{{ _('News') }}</a>
           </li>
           <li>
-            <a href="/concorsi">Contest</a>
+            <a href="/concorsi">{{ _('Contest') }}</a>
           </li>
           <li>
-            <a href="/appuntamenti">Appuntamenti</a>
+            <a href="/appuntamenti">{{ _('Appointment') }}</a>
           </li>
           <li>
-            <a href="/newsletter">Newsletter</a>
+            <a href="/newsletter">{{ _('Newsletter') }}</a>
           </li>
-          <li><a href="/focus">Focus</a></li>
+          <li><a href="/focus">{{ _('Focus') }}</a></li>
         </ul>
       </li>
     </ul>
