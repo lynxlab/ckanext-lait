@@ -548,7 +548,7 @@ msgid "This dataset has no data"
 msgstr ""
 
 #: ckanext/lait/templates/package/snippets/tags.html:10
-msgid "Gruppo"
+msgid "Group"
 msgstr ""
 
 #: ckanext/lait/templates/package/snippets/tags.html:14

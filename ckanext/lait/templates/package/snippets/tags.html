@@ -7,12 +7,12 @@
 <div class="category-tags">
 		<ul>
 		{% if groups[0] and groups[0].get("name") is defined and groups[0].get("name")|length %}
-		<li><span>{{ _('Gruppo') }}</span>:
+		<li><span>{{ _('Group') }}</span>:
 			{% for group in groups %}
 				{% set type = group.type or 'group' %}
 				{% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
 				<!-- href="{{ url }}" title="{{ _('View {name}').format(name=group.display_name) }}" -->
-				<a href="{% url_for controller='package', action='search', category=group.name %}">{{ group.display_name }}</a>
+				<a href="{% url_for controller='package', action='search', groups=group.name %}">{{ group.display_name }}</a>
 				{% if groups[loop.index] is defined -%}
 					|
 				{%- endif %}
