@@ -19,6 +19,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
+msgid "record"
+msgstr "elemento"
+
+msgid "records"
+msgstr "elementi"
+
+msgid "Search data"
+msgstr "Cerca nei dati"
+
+msgid "Add filter"
+msgstr "Aggiungi filtro"
+
+msgid "Add"
+msgstr "Aggiungi"
+
+msgid "Field"
+msgstr "Campo"
+
 #: ckanext/lait/plugin.py:79
 #: ckanext/lait/templates/organization-disabled/index.html:3
 #: ckanext/lait/templates/organization-disabled/index.html:6
