@@ -520,8 +520,12 @@ msgstr "Gruppo"
 msgid "View {name}"
 msgstr "Visualizza {name}"
 
-#: ckanext/lait/templates/partials/topline.html:85 ckanext/lait/templates/partials/topline.html:87
-msgid "Log out"
+#: ckanext/lait/templates/partials/topline.html:53
+msgid "Reserved area"
+msgstr "Area riservata"
+
+#: ckanext/lait/templates/partials/topline.html:55
+msgid "Logout"
 msgstr "Esci"
 
 #: ckanext/lait/templates/related/snippets/related_form.html:7
