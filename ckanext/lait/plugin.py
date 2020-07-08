@@ -1,4 +1,3 @@
-
 import logging
 import routes.mapper
 import ckan.lib.base as base
@@ -77,8 +76,6 @@ def comuni():
 def facets():
     d = collections.OrderedDict()
     d['organization'] = _('Organizations')
-    d['category'] = _('Categories')
-    d['rating_average_int'] = _('Community Rating')
     d['tags'] = _('Tags')
     d['res_format'] = _('Formats')
     d['license_id'] = _('Licenses')
@@ -248,7 +245,6 @@ class LaitPlugin(p.SingletonPlugin, DefaultTranslation):
         with routes.mapper.SubMapper(route_map,
                 controller='ckanext.lait.plugin:LaitController') as m:
             m.connect('translator_index', '/translator', action='translator')
-            m.connect('disqus', '/disqus', action='disqus')
             m.connect('geocoding_gazetteer', '/geocoding_gazetteer', action='geocoding_gazetteer')
         return route_map
 
@@ -267,13 +263,6 @@ class LaitController(base.BaseController):
         except ckan.logic.NotAuthorized:
             base.abort(401, _('Unauthorized to access translator'))
         return base.render('translator/index.html')
-
-    def disqus(self):
-        c.data = {
-            'id': request.params.get('id', u''),
-            'title': request.params.get('title', u'')
-        }
-        return base.render('package/disqus.html')
 
     @jsonp.jsonpify
     def geocoding_gazetteer(self):
