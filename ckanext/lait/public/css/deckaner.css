@@ -440,7 +440,7 @@ ul.operations {
 }
 /*Breadcrumg Ends*/
 
-.dropdown-menu > li > a {
+.dropdown-menu:not(.new-view) > li > a {
    color: #ffffff !important;
 }
 
