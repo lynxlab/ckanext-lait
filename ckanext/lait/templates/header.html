@@ -75,14 +75,10 @@
         </a>
         <ul class="dropdown-content">
           <li>
-            <a href="/catalog/{{ current_lang }}/dataset" class="first-elem"> {{ _('Data') }} </a>
-            <a href="/catalog/{{ current_lang }}/dataset">{{ _('Dataset') }}</a>
+            <a href="/catalog/{{ current_lang }}/dataset?res_format=wms">{{ _('Geo data') }}</a>
           </li>
-          <li>
-            <a href="/catalog/{{ current_lang }}/dataset?res_format=wms">{{ _('Geographic data') }}</a>
-          </li>
-          <li><a href="/catalog/{{ current_lang }}/organization">{{ _('Search organization') }}</a></li>
-          <li><a href="/catalog/{{ current_lang }}/group">{{ _('Search category') }}</a></li>
+          <li><a href="/catalog/{{ current_lang }}/organization">{{ _('Organizations') }}</a></li>
+          <li><a href="/catalog/{{ current_lang }}/group">{{ _('Groups') }}</a></li>
           <!-- <li>
             <a href="/catalog/category">Cerca per categoria</a>
           </li> -->
@@ -91,7 +87,7 @@
             <a href="//10.2.61.217/lod/">{{ _('Linked data') }}</a>
           </li>
           <li>
-            <a href="/invia-il-tuo-dataset1">{{ _('Send your dataset') }}</a>
+            <a href="/invia-il-tuo-dataset1">{{ _('Submit your dataset') }}</a>
           </li>
         </ul>
       </li>
@@ -110,28 +106,10 @@
         </ul>
       </li>
       <li class="select-dropdown">
-        <a href="/notizie" class="dropbtn nav-link">
-          {{ _('News') }} <span class="caret-custom"></span>
+        <a href="/news" class="dropbtn nav-link">
+          {{ _('News') }} 
         </a>
-        <ul class="dropdown-content">
-          <li>
-            <a href="/notizie" class="first-elem">
-              {{ _('News') }}
-            </a>
-            <a href="/news">{{ _('News') }}</a>
-          </li>
-          <li>
-            <a href="/concorsi">{{ _('Contest') }}</a>
-          </li>
-          <li>
-            <a href="/appuntamenti">{{ _('Appointment') }}</a>
-          </li>
-          <li>
-            <a href="/newsletter">{{ _('Newsletter') }}</a>
-          </li>
-          <li><a href="/focus">{{ _('Focus') }}</a></li>
-        </ul>
-      </li>
+        </li>
     </ul>
   </div>
 </nav>

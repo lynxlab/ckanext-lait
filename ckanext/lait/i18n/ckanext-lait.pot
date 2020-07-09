@@ -40,6 +40,7 @@ msgstr ""
 #: ckanext/lait/templates/organization-disabled/index.html:6
 #: ckanext/lait/templates/organization-disabled/index.html:18
 #: ckanext/lait/templates/package/base.html:16
+#: ckanext/lait/templates/header.html:84
 msgid "Organizations"
 msgstr ""
 
@@ -98,15 +99,11 @@ msgid "Dataset"
 msgstr ""
 
 #: ckanext/lait/templates/header.html:82
-msgid "Geographic data"
-msgstr ""
-
-#: ckanext/lait/templates/header.html:84
-msgid "Search organization"
+msgid "Geo data"
 msgstr ""
 
 #: ckanext/lait/templates/header.html:85
-msgid "Search category"
+msgid "Groups"
 msgstr ""
 
 #: ckanext/lait/templates/header.html:91
@@ -125,25 +122,8 @@ msgstr ""
 msgid "Report your app"
 msgstr ""
 
-#: ckanext/lait/templates/header.html:114 ckanext/lait/templates/header.html:119
-#: ckanext/lait/templates/header.html:121
+#: ckanext/lait/templates/header.html:110
 msgid "News"
-msgstr ""
-
-#: ckanext/lait/templates/header.html:124
-msgid "Contest"
-msgstr ""
-
-#: ckanext/lait/templates/header.html:127
-msgid "Appointment"
-msgstr ""
-
-#: ckanext/lait/templates/header.html:130
-msgid "Newsletter"
-msgstr ""
-
-#: ckanext/lait/templates/header.html:132
-msgid "Focus"
 msgstr ""
 
 #: ckanext/lait/templates/dataviewer/snippets/data_preview.html:9
