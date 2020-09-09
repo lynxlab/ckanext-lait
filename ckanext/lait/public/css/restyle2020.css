@@ -263,15 +263,15 @@ header .header-logos .lines div {
 
 header .header-logos .right-logo {
   padding: 10px;
-  background: #fff;
-  height: 40px;
+  #background: #fff;
+  height: 70px;
   display: flex;
   align-items: center;
 }
 
 header .header-logos .right-logo img {
   padding: 0 10px;
-  height: 30px;
+  height: 70px;
 }
 
 /*-------------BREADCRUMBS----------------*/
@@ -440,6 +440,11 @@ footer .footer-notes a:last-child {
 footer .footer-social .footer-navigate li {
   display: inline-block;
 }
+
+footer ul.footer-navigate {
+ padding-left: 0;
+}
+
 
 footer .footer-social .footer-navigate li i {
   background: white;
