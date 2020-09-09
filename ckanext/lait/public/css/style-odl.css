@@ -839,6 +839,18 @@ h3 {
   margin-left: 10px !important;
 }
 
+.media-item {
+  margin-left: 10px !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+}
+
+.media-item > .count {
+   align-self: flex-end;
+   margin-top: auto;
+}
+
 .module-content:last-child {
   margin-bottom: 0;
   padding-bottom: 20px;
